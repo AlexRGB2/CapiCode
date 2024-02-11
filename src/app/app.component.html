@@ -1,0 +1,33 @@
+<div class="bg-gray-300 dark:bg-slate-800">
+  <app-header></app-header>
+  <xng-breadcrumb [autoGenerate]="false" [separator]="breadcrumbIcon">
+    <ng-container *xngBreadcrumbItem="let breadcrumb">
+      <a
+        [routerLink]="[breadcrumb.url]"
+        class="m-4 dark:text-white dark:hover:text-blue-700 hover:text-teal-400 font-semibold"
+        >{{ breadcrumb }}</a
+      >
+    </ng-container>
+  </xng-breadcrumb>
+  <router-outlet />
+  <app-footer></app-footer>
+</div>
+
+<!-- Icono de breadcrumb -->
+<ng-template #breadcrumbIcon>
+  <svg
+    class="rtl:rotate-180 w-3 h-3 dark:text-gray-400 text-slate-800 mx-1"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 6 10"
+  >
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="m1 9 4-4-4-4"
+    />
+  </svg>
+</ng-template>
