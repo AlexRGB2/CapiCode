@@ -3,7 +3,7 @@
     <div class="md:flex md:justify-between">
       <div class="mb-6 md:mb-0">
         <a href="https://flowbite.com/" class="flex items-center">
-          <<img
+          <img
             src="../../../assets/images/capilogo.png"
             class="h-16"
             alt="CapiCode Logo"
@@ -63,10 +63,20 @@
           </h2>
           <ul class="text-gray-500 dark:text-gray-400 font-medium">
             <li class="mb-4">
-              <a href="#" class="hover:underline">Politica de Privacidad</a>
+              <a
+                (click)="scrollToTop()"
+                [routerLink]="['/privacy-policy']"
+                class="hover:underline"
+                >Politica de Privacidad</a
+              >
             </li>
             <li>
-              <a href="#" class="hover:underline">Terminos &amp; Condiciones</a>
+              <a
+                (click)="scrollToTop()"
+                [routerLink]="['/terms-conditions']"
+                class="hover:underline"
+                >Terminos &amp; Condiciones</a
+              >
             </li>
           </ul>
         </div>

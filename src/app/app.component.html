@@ -1,5 +1,5 @@
-<div class="bg-gray-50 dark:dark:bg-gray-900">
-  <app-header></app-header>
+<app-header class="sticky top-0 z-50"></app-header>
+<div class="bg-gray-200 dark:bg-slate-700">
   <xng-breadcrumb [autoGenerate]="false" [separator]="breadcrumbIcon">
     <ng-container *xngBreadcrumbItem="let breadcrumb; let last = last">
       <a
@@ -8,10 +8,11 @@
       >
     </ng-container>
   </xng-breadcrumb>
-  <router-outlet />
-  <app-footer></app-footer>
+  <router-outlet class="py-8" />
 </div>
+<app-footer class="bottom-0"></app-footer>
 
+<app-scroll-to-top-button></app-scroll-to-top-button>
 <!-- Icono de breadcrumb -->
 <ng-template #breadcrumbIcon>
   <svg
