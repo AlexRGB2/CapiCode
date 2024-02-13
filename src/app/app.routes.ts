@@ -14,10 +14,6 @@ export const routes: Routes = [
     },
   },
   {
-    path: '*',
-    redirectTo: 'home',
-  },
-  {
     path: 'home',
     component: HomeComponent,
   },
@@ -38,6 +34,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    component: ErrorComponent,
+    component: ErrorComponent
   },
 ];

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './pages/header/header.component';
 import { initFlowbite } from 'flowbite';
 import { FooterComponent } from './pages/footer/footer.component';
@@ -14,8 +14,7 @@ import { ErrorComponent } from './pages/error/error.component';
     HeaderComponent,
     FooterComponent,
     BreadcrumbModule,
-    RouterLink,
-    ErrorComponent,
+    RouterModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
