@@ -4,6 +4,7 @@ import { HeaderComponent } from './pages/header/header.component';
 import { initFlowbite } from 'flowbite';
 import { FooterComponent } from './pages/footer/footer.component';
 import { BreadcrumbModule } from 'xng-breadcrumb';
+import { ErrorComponent } from './pages/error/error.component';
 import { ScrollToTopButtonComponent } from './scroll-to-top-button/scroll-to-top-button.component';
 
 @Component({

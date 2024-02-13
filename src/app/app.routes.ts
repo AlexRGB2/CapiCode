@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { PlanesComponent } from './pages/planes/planes.component';
 import { PoliticaPrivacidadComponent } from './pages/politica-privacidad/politica-privacidad.component';
 import { TerminosCondicionesComponent } from './pages/terminos-condiciones/terminos-condiciones.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 export const routes: Routes = [
   {
@@ -56,7 +57,7 @@ export const routes: Routes = [
     },
   },
   {
-    path: '*',
-    redirectTo: 'home',
+    path: '**',
+    component: ErrorComponent
   },
 ];
