@@ -21,8 +21,6 @@ import { ScrollToTopButtonComponent } from './components/scroll-to-top-button/sc
   ],
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  title = 'CapiCode';
-
   ngOnInit(): void {
     initFlowbite();
   }
