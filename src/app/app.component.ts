@@ -27,8 +27,6 @@ import { ErrorComponent } from './pages/error/error.component';
   ],
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  title = 'CapiCode';
-
   ngOnInit(): void {
     initFlowbite();
   }

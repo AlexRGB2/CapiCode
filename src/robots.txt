@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://capicode-25432.web.app/sitemap.xml
