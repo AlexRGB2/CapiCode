@@ -5,6 +5,9 @@ import { initFlowbite } from 'flowbite';
 import { FooterComponent } from './pages/footer/footer.component';
 import { BreadcrumbModule } from 'xng-breadcrumb';
 import { ScrollToTopButtonComponent } from './components/scroll-to-top-button/scroll-to-top-button.component';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { RegisterComponent } from './pages/auth/register/register.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +20,10 @@ import { ScrollToTopButtonComponent } from './components/scroll-to-top-button/sc
     FooterComponent,
     BreadcrumbModule,
     RouterModule,
+    ErrorComponent,
     ScrollToTopButtonComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
 })
 export class AppComponent implements OnInit, AfterViewInit {
