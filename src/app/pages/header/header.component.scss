@@ -150,3 +150,9 @@
     }
   }
 }
+
+@media (width < 640px) {
+  .switch {
+    margin-bottom: 12px;
+  }
+}
