@@ -45,21 +45,21 @@
       <button
         id="carousel-indicator-1"
         type="button"
-        class="h-3 w-3 rounded-full"
+        class="h-12 w-12 rounded-full m-2"
         aria-current="true"
         aria-label="Slide 1"
       ></button>
       <button
         id="carousel-indicator-2"
         type="button"
-        class="h-3 w-3 rounded-full"
+        class="h-12 w-12 rounded-full m-2"
         aria-current="false"
         aria-label="Slide 2"
       ></button>
       <button
         id="carousel-indicator-3"
         type="button"
-        class="h-3 w-3 rounded-full"
+        class="h-12 w-12 rounded-full m-2"
         aria-current="false"
         aria-label="Slide 3"
       ></button>
@@ -69,10 +69,11 @@
       (click)="onPrevClick()"
       id="data-carousel-prev"
       type="button"
+      aria-label="Anterior"
       class="group absolute left-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
     >
       <span
-        class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-200/50 dark:group-hover:bg-gray-200/30 dark:group-focus:ring-gray-200/40"
       >
         <svg
           class="h-4 w-4 text-white dark:text-gray-800"
@@ -89,17 +90,18 @@
             d="M5 1 1 5l4 4"
           />
         </svg>
-        <span class="hidden">Previous</span>
+        <span class="hidden">Anterior</span>
       </span>
     </button>
     <button
       (click)="onNextClick()"
       id="data-carousel-next"
       type="button"
+      aria-label="Siguiente"
       class="group absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
     >
       <span
-        class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-200/50 dark:group-hover:bg-gray-200/30 dark:group-focus:ring-gray-200/40"
       >
         <svg
           class="h-4 w-4 text-white dark:text-gray-800"
@@ -116,14 +118,14 @@
             d="m1 9 4-4-4-4"
           />
         </svg>
-        <span class="hidden">Next</span>
+        <span class="hidden">Siguiente</span>
       </span>
     </button>
   </div>
 
   <section
     id="hero"
-    class="flex flex-col md:flex-row items-center justify-between p-4 md:p-8 m-12"
+    class="flex flex-col md:flex-row items-center justify-between p-4 md:p-8"
   >
     <div class="max-w-2xl mb-4 md:mb-0 md:mr-4">
       <h2
@@ -135,11 +137,12 @@
         Explora, aprende y domina las últimas tecnologías con nuestros cursos en
         línea. ¡Prepárate para el éxito!
       </p>
-      <a
+      <button
         [routerLink]="['/cursos']"
-        class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition"
-        >Descubre Nuestros Cursos</a
+        class="bg-blue-500 text-white p-4 rounded-full hover:bg-blue-700 transition font-medium"
       >
+        Descubre Nuestros Cursos
+      </button>
     </div>
     <img
       src="../../../assets/images/estudianteFeliz.jpeg"
@@ -149,7 +152,10 @@
   </section>
 </div>
 
-<section id="cursos" class="bg-white dark:bg-gray-900 py-8 md:py-12">
+<section
+  id="cursos"
+  class="bg-white dark:bg-gray-900 items-center justify-between p-8 md:p-8"
+>
   <h3
     class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-center dark:text-white"
   >
@@ -159,7 +165,7 @@
     class="flex flex-col items-center md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8"
   >
     <div
-      class="max-w-md bg-white dark:bg-slate-800 p-4 md:p-6 rounded-xl shadow-md"
+      class="max-w-md bg-white dark:bg-slate-800 p-6 md:p-6 rounded-xl shadow-md"
     >
       <img
         src="../../../assets/images/capipython.png"
@@ -173,19 +179,19 @@
         Desde HTML y CSS hasta frameworks modernos. ¡Conviértete en un
         desarrollador web experto!
       </p>
-      <a
-        href="#curso1-detalle"
-        class="bg-blue-500 text-white px-3 md:px-4 py-2 rounded-full hover:bg-blue-700 transition"
-        >Ver Detalles</a
+      <button
+        class="bg-blue-400 text-black px-3 md:px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition"
       >
+        Ver Detalles
+      </button>
     </div>
 
     <div
-      class="max-w-md bg-white dark:bg-slate-800 p-4 md:p-6 rounded-lg shadow-md"
+      class="max-w-md bg-white dark:bg-slate-800 p-6 md:p-6 rounded-xl shadow-md"
     >
       <img
         src="../../../assets/images/capipython.png"
-        alt="Curso de Inteligencia Artificial"
+        alt="Curso de Desarrollo Web"
         class="mb-4 rounded-lg"
       />
       <h3 class="text-lg md:text-xl lg:text-2xl dark:text-white font-bold mb-2">
@@ -195,15 +201,15 @@
         Descubre el fascinante mundo de la IA. Aprende machine learning, deep
         learning y más.
       </p>
-      <a
-        href="#curso2-detalle"
-        class="bg-blue-500 text-white px-3 md:px-4 py-2 rounded-full hover:bg-blue-700 transition"
-        >Ver Detalles</a
+      <button
+        class="bg-blue-400 text-black px-3 md:px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition"
       >
+        Ver Detalles
+      </button>
     </div>
 
     <div
-      class="max-w-md bg-white dark:bg-slate-800 p-4 md:p-6 rounded-xl shadow-md"
+      class="max-w-md bg-white dark:bg-slate-800 p-6 md:p-6 rounded-xl shadow-md"
     >
       <img
         src="../../../assets/images/capipython.png"
@@ -217,15 +223,15 @@
         Desde HTML y CSS hasta frameworks modernos. ¡Conviértete en un
         desarrollador web experto!
       </p>
-      <a
-        href="#curso1-detalle"
-        class="bg-blue-500 text-white px-3 md:px-4 py-2 rounded-full hover:bg-blue-700 transition"
-        >Ver Detalles</a
+      <button
+        class="bg-blue-400 text-black px-3 md:px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition"
       >
+        Ver Detalles
+      </button>
     </div>
 
     <div
-      class="max-w-md bg-white dark:bg-slate-800 p-4 md:p-6 rounded-lg shadow-md"
+      class="max-w-md bg-white dark:bg-slate-800 p-6 md:p-6 rounded-xl shadow-md"
     >
       <img
         src="../../../assets/images/capipython.png"
@@ -239,11 +245,11 @@
         Descubre el fascinante mundo de la IA. Aprende machine learning, deep
         learning y más.
       </p>
-      <a
-        href="#curso2-detalle"
-        class="bg-blue-500 text-white px-3 md:px-4 py-2 rounded-full hover:bg-blue-700 transition"
-        >Ver Detalles</a
+      <button
+        class="bg-blue-400 text-black px-3 md:px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition"
       >
+        Ver Detalles
+      </button>
     </div>
   </div>
 </section>

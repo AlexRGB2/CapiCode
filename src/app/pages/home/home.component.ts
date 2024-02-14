@@ -6,10 +6,12 @@ import type {
   CarouselOptions,
   CarouselInterface,
 } from 'flowbite';
+import { LazyImgDirective } from '../../directives/lazy-img.directive';
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, LazyImgDirective],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
