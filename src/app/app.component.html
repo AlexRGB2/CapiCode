@@ -1,8 +1,9 @@
 <app-header class="sticky top-0 z-50"></app-header>
 <div class="bg-gray-200 dark:bg-slate-700">
   <xng-breadcrumb [autoGenerate]="false" [separator]="breadcrumbIcon">
-    <ng-container *xngBreadcrumbItem="let breadcrumb; let last = last">
+    <ng-container *xngBreadcrumbItem="let breadcrumb; let info = info">
       <a
+        [href]="info.url"
         class="m-4 dark:text-white dark:hover:text-blue-700 hover:text-teal-400 font-semibold"
         >{{ breadcrumb }}</a
       >
