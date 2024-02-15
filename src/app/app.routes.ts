@@ -13,7 +13,7 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
     data: {
-      breadcrumb: 'Inicio',
+      breadcrumb: { label: 'Inicio', info: { url: 'home' } },
     },
   },
   {
@@ -24,40 +24,45 @@ export const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     data: {
-      breadcrumb: 'Iniciar Sesión',
-      url: 'login',
+      breadcrumb: { label: 'Iniciar Sesión', info: { url: 'login' } },
     },
   },
   {
     path: 'register',
     component: RegisterComponent,
     data: {
-      breadcrumb: 'Crear Cuenta',
+      breadcrumb: { label: 'Crear Cuenta', info: { url: 'register' } },
     },
   },
   {
     path: 'plans',
     component: PlanesComponent,
     data: {
-      breadcrumb: 'Planes',
+      breadcrumb: { label: 'Planes', info: { url: 'plans' } },
     },
   },
   {
     path: 'privacy-policy',
     component: PoliticaPrivacidadComponent,
     data: {
-      breadcrumb: 'Política de Privacidad',
+      breadcrumb: {
+        label: 'Política de Privacidad',
+        info: { url: 'privacy-policy' },
+      },
     },
   },
   {
     path: 'terms-conditions',
     component: TerminosCondicionesComponent,
     data: {
-      breadcrumb: 'Términos y Condiciones',
+      breadcrumb: {
+        label: 'Términos y Condiciones',
+        info: { url: 'terms-conditions' },
+      },
     },
   },
   {
     path: '**',
-    component: ErrorComponent
+    component: ErrorComponent,
   },
 ];
