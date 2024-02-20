@@ -5,55 +5,34 @@ import { AuthService } from '../../../services/auth.service';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [
-    ReactiveFormsModule,
-  ],
+  imports: [ReactiveFormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: './login.component.scss',
 })
-
-
 export class LoginComponent {
-  loginForm = this.formBuilder.group(
-    {
-      correo: [
-        '',
-        [
-          Validators.required,
-          Validators.email
-        ]
-      ],
-      contrasena: [
-        '',
-        [
-          Validators.required
-        ]
-      ]
-    }
-  );
+  loginForm = this.formBuilder.group({
+    correo: ['', [Validators.required, Validators.email]],
+    contrasena: ['', [Validators.required]],
+  });
 
   validaciones = {
     correo: [
       { type: 'required', message: 'El campo es requerido' },
-      { type: 'email', message: 'Este no es un correo valido' }
+      { type: 'email', message: 'Este no es un correo valido' },
     ],
-    contrasena: [
-      { type: 'required', message: 'El campo es requerido' }
-    ],
+    contrasena: [{ type: 'required', message: 'El campo es requerido' }],
   };
 
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService
-  ) {
-
-  }
+  ) {}
 
   onSubmit() {
     const loginForm = {
       correo: this.loginForm.get('correo')?.value,
       contrasena: this.loginForm.get('contrasena')?.value,
-    }
+    };
 
     console.log(loginForm);
 
