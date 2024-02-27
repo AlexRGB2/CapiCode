@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.darkMode();
   }
+
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
