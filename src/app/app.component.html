@@ -1,5 +1,6 @@
 <app-header class="sticky top-0 z-50"></app-header>
 <div class="bg-gray-200 dark:bg-slate-700">
+  @defer(){
   <xng-breadcrumb [autoGenerate]="false" [separator]="breadcrumbIcon">
     <ng-container *xngBreadcrumbItem="let breadcrumb; let info = info">
       <a
@@ -9,6 +10,7 @@
       >
     </ng-container>
   </xng-breadcrumb>
+  }
   <router-outlet class="py-8" />
 </div>
 <app-footer class="bottom-0"></app-footer>

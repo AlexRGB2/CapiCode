@@ -19,23 +19,41 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('carouselExample', { static: true })
   carouselElementRef!: ElementRef;
 
+  @ViewChild('carouselitem1', { static: true })
+  carouselItem1!: ElementRef;
+
+  @ViewChild('carouselitem2', { static: true })
+  carouselItem2!: ElementRef;
+
+  @ViewChild('carouselitem3', { static: true })
+  carouselItem3!: ElementRef;
+
+  @ViewChild('carouselindicator1', { static: true })
+  carouselindicator1!: ElementRef;
+
+  @ViewChild('carouselindicator2', { static: true })
+  carouselindicator2!: ElementRef;
+
+  @ViewChild('carouselindicator3', { static: true })
+  carouselindicator3!: ElementRef;
+
   private carousel!: CarouselInterface;
 
   ngAfterViewInit() {
-    const carouselElement: HTMLElement = this.carouselElementRef!.nativeElement;
+    const carouselElement: HTMLElement = this.carouselElementRef.nativeElement;
 
     const items: CarouselItem[] = [
       {
         position: 0,
-        el: document.getElementById('carousel-item-1')!,
+        el: this.carouselItem1.nativeElement,
       },
       {
         position: 1,
-        el: document.getElementById('carousel-item-2')!,
+        el: this.carouselItem2.nativeElement,
       },
       {
         position: 2,
-        el: document.getElementById('carousel-item-3')!,
+        el: this.carouselItem3.nativeElement,
       },
     ];
 
@@ -49,15 +67,15 @@ export class HomeComponent implements AfterViewInit {
         items: [
           {
             position: 0,
-            el: document.getElementById('carousel-indicator-1')!,
+            el: this.carouselindicator1.nativeElement,
           },
           {
             position: 1,
-            el: document.getElementById('carousel-indicator-2')!,
+            el: this.carouselindicator2.nativeElement,
           },
           {
             position: 2,
-            el: document.getElementById('carousel-indicator-3')!,
+            el: this.carouselindicator3.nativeElement,
           },
         ],
       },
