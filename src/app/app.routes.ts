@@ -11,15 +11,10 @@ import { ErrorComponent } from './pages/error/error.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
-    data: {
-      breadcrumb: { label: 'Inicio', info: { url: 'home' } },
-    },
-  },
-  {
-    path: 'home',
     component: HomeComponent,
+    data: {
+      breadcrumb: { label: 'Inicio', info: { url: '' } },
+    },
   },
   {
     path: 'login',
