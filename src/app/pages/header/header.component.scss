@@ -22,7 +22,7 @@
   input {
     display: none;
 
-    &:not(:checked)~.switch__background {
+    &:checked~.switch__background {
       background-position: 20% 0%;
 
       &:before {
@@ -35,7 +35,7 @@
       }
     }
 
-    &:not(:checked)~.switch__button {
+    &:checked~.switch__button {
       left: calc(100% - 5px);
       transform: translateX(-100%);
       transition: 0.2s ease all;
