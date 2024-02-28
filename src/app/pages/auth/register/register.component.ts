@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -43,7 +44,7 @@ export class RegisterComponent {
           Validators.required,
           Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/),
           Validators.minLength(8),
-          Validators.maxLength(40),
+          Validators.maxLength(16),
         ]
       ],
       repetirContrasena: [
@@ -80,8 +81,8 @@ export class RegisterComponent {
     contrasena: [
       { type: 'required', message: 'El campo es requerido' },
       { type: 'pattern', message: 'Este campo debe contener mayusculas, minusculas, numeros y caracteres especiales' },
-      { type: 'minLength', message: 'El mínimo de caracteres es 8' },
-      { type: 'maxLength', message: 'El máximo de caracteres es 40' }
+      { type: 'minlength', message: 'El mínimo de caracteres es 8' },
+      { type: 'maxlength', message: 'El máximo de caracteres es 16' }
     ],
     repetirContrasena: [
       { type: 'required', message: 'El campo es requerido' },
@@ -104,7 +105,10 @@ export class RegisterComponent {
       const control = formGroup.get(controlName);
       const matchingControl = formGroup.get(matchingControlName);
 
-      if (control && matchingControl && control.value !== matchingControl.value) {
+      if (matchingControl?.value == null || matchingControl?.value == '') {
+        matchingControl?.setErrors({ required: true });
+        return { required: true };
+      } else if (control && matchingControl && control.value !== matchingControl.value) {
         matchingControl.setErrors({ passwordMismatch: true });
         return { passwordMismatch: true };
       } else {
@@ -115,6 +119,11 @@ export class RegisterComponent {
   }
 
   onSubmit() {
+    if (!this.registerForm.valid) {
+      this.markAllAsDirty();
+      return;
+    }
+
     const registerForm = {
       nombre: this.registerForm.get('nombre')?.value,
       correo: this.registerForm.get('correo')?.value,
@@ -126,7 +135,21 @@ export class RegisterComponent {
     console.log(registerForm);
 
     this.authService.signUp(registerForm).subscribe((res: any) => {
-      console.log(res);
+      if (res.estado == "Exitó") {
+        Swal.fire({
+          title: res.estado,
+          text: res.mensaje,
+          icon: 'success',
+          confirmButtonText: 'Cerrar'
+        })
+      } else {
+        Swal.fire({
+          title: res.estado,
+          text: res.mensaje,
+          icon: 'error',
+          confirmButtonText: 'Cerrar'
+        })
+      }
     });
   }
 
@@ -152,5 +175,13 @@ export class RegisterComponent {
 
   get aceptarTerminos() {
     return this.registerForm.get('aceptarTerminos');
+  }
+
+  // Método para marcar todos los campos como "dirty"
+  markAllAsDirty() {
+    Object.keys(this.registerForm.controls).forEach(controlName => {
+      const control = this.registerForm.get(controlName);
+      control?.markAsTouched();
+    });
   }
 }
