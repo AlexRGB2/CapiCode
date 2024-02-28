@@ -39,12 +39,6 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://capicode-25432.web.app/terms&conditions</loc>
-        <lastmod>2024-02-28</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
         <loc>https://capicode-25432.web.app/privacy-policy</loc>
         <lastmod>2024-02-28</lastmod>
         <changefreq>always</changefreq>
