@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../../services/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -11,8 +12,20 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class LoginComponent {
   loginForm = this.formBuilder.group({
-    correo: ['', [Validators.required, Validators.email]],
-    contrasena: ['', [Validators.required]],
+    correo: [
+      '',
+      [
+        Validators.required, Validators.email
+      ]
+    ],
+    contrasena: [
+      '',
+      [
+        Validators.required,
+        Validators.minLength(8),
+        Validators.maxLength(16),
+      ]
+    ],
   });
 
   validaciones = {
@@ -20,15 +33,24 @@ export class LoginComponent {
       { type: 'required', message: 'El campo es requerido' },
       { type: 'email', message: 'Este no es un correo valido' },
     ],
-    contrasena: [{ type: 'required', message: 'El campo es requerido' }],
+    contrasena: [
+      { type: 'required', message: 'El campo es requerido' },
+      { type: 'minlength', message: 'El mínimo de caracteres es 8' },
+      { type: 'maxlength', message: 'El máximo de caracteres es 16' }
+    ],
   };
 
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService
-  ) {}
+  ) { }
 
   onSubmit() {
+    if (!this.loginForm.valid) {
+      this.markAllAsDirty();
+      return;
+    }
+
     const loginForm = {
       correo: this.loginForm.get('correo')?.value,
       contrasena: this.loginForm.get('contrasena')?.value,
@@ -37,7 +59,21 @@ export class LoginComponent {
     console.log(loginForm);
 
     this.authService.signIn(loginForm).subscribe((res: any) => {
-      console.log(res);
+      if (res.estado == "Exitó") {
+        Swal.fire({
+          title: res.estado,
+          text: res.mensaje,
+          icon: 'success',
+          confirmButtonText: 'Cerrar'
+        })
+      } else {
+        Swal.fire({
+          title: res.estado,
+          text: res.mensaje,
+          icon: 'error',
+          confirmButtonText: 'Cerrar'
+        })
+      }
     });
   }
 
@@ -47,5 +83,13 @@ export class LoginComponent {
 
   get contrasena() {
     return this.loginForm.get('contrasena');
+  }
+
+  // Método para marcar todos los campos como "dirty"
+  markAllAsDirty() {
+    Object.keys(this.loginForm.controls).forEach(controlName => {
+      const control = this.loginForm.get(controlName);
+      control?.markAsTouched();
+    });
   }
 }
