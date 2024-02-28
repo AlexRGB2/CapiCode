@@ -7,6 +7,7 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <base href="/" />
+
     <!-- Metadatos para SEO -->
     <title>CapiCode | Aprende Programación en Línea</title>
     <meta
@@ -73,18 +74,6 @@
       content="https://firebasestorage.googleapis.com/v0/b/capicode-25432.appspot.com/o/capilogo.png?alt=media&token=4e68fb81-2350-4795-870c-a98b8be39bfb"
     />
     <meta name="twitter:creator" content="@yoalexrgbchill" />
-
-    <script>
-      if (
-        localStorage.getItem("color-theme") === "dark" ||
-        (!("color-theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    </script>
   </head>
   <body class="bg-white dark:bg-gray-900">
     <app-root></app-root>

@@ -1,4 +1,12 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  Inject,
+  OnInit,
+  PLATFORM_ID,
+  afterRender,
+  runInInjectionContext,
+} from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './pages/header/header.component';
 import { initFlowbite } from 'flowbite';
@@ -8,6 +16,7 @@ import { ScrollToTopButtonComponent } from './components/scroll-to-top-button/sc
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -26,18 +35,12 @@ import { ErrorComponent } from './pages/error/error.component';
     RegisterComponent,
   ],
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit(): void {
-    initFlowbite();
-  }
-
-  ngAfterViewInit(): void {
-    this.loadScript('../../../assets/js/darkMode.js');
-  }
-
-  private loadScript(scriptUrl: string): void {
-    const script = document.createElement('script');
-    script.src = scriptUrl;
-    document.body.appendChild(script);
+    if (isPlatformBrowser(this.platformId)) {
+      initFlowbite();
+    }
   }
 }
