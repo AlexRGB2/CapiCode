@@ -1,14 +1,19 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './pages/header/header.component';
+import { isPlatformBrowser } from '@angular/common';
+
+// Librerias
 import { initFlowbite } from 'flowbite';
-import { FooterComponent } from './pages/footer/footer.component';
 import { BreadcrumbModule } from 'xng-breadcrumb';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
+// Componentes
+import { HeaderComponent } from './pages/header/header.component';
+import { FooterComponent } from './pages/footer/footer.component';
 import { ScrollToTopButtonComponent } from './components/scroll-to-top-button/scroll-to-top-button.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { ErrorComponent } from './pages/error/error.component';
-import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -25,9 +30,12 @@ import { isPlatformBrowser } from '@angular/common';
     ScrollToTopButtonComponent,
     LoginComponent,
     RegisterComponent,
+    NgxSpinnerModule,
   ],
 })
 export class AppComponent implements OnInit {
+  public loading = false;
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit(): void {
