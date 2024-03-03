@@ -1,4 +1,11 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { Carousel } from 'flowbite';
 import type {
@@ -14,7 +21,7 @@ import type {
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit, OnInit {
   @ViewChild('carouselExample', { static: true })
   carouselElementRef!: ElementRef;
 
@@ -37,6 +44,12 @@ export class HomeComponent implements AfterViewInit {
   carouselindicator3!: ElementRef;
 
   private carousel!: CarouselInterface;
+
+  constructor(private title: Title) {}
+
+  ngOnInit(): void {
+    this.title.setTitle('CapiCode | Aprende Programación en Línea');
+  }
 
   ngAfterViewInit() {
     const carouselElement: HTMLElement = this.carouselElementRef.nativeElement;
