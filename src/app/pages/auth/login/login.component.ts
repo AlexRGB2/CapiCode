@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private title: Title,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.title.setTitle('CapiCode | Inicia sesión');
@@ -64,6 +64,7 @@ export class LoginComponent implements OnInit {
     this.authService.signIn(loginForm).subscribe((res: any) => {
       if (res.estado == 'Exitó') {
         this.router.navigateByUrl('/').finally(() => {
+          sessionStorage.setItem('userName', res.objeto.nombre!);
           window.location.reload();
         });
       } else {

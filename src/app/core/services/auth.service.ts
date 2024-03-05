@@ -11,14 +11,13 @@ import Swal from 'sweetalert2';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   signIn(loginForm: LoginForm) {
     return this.http
       .post<any>(`${environment.API_URL}/api/auth/signIn`, loginForm)
       .pipe(
         map((res: LoginResponse) => {
-          sessionStorage.setItem('userName', res.objeto.nombre!);
           return res;
         })
       );
