@@ -1,45 +1,48 @@
 import { Routes } from '@angular/router';
 
-import { HomeComponent } from './pages/home/home.component';
-import { RegisterComponent } from './pages/auth/register/register.component';
-import { LoginComponent } from './pages/auth/login/login.component';
-import { PlanesComponent } from './pages/planes/planes.component';
-import { PoliticaPrivacidadComponent } from './pages/politica-privacidad/politica-privacidad.component';
-import { TerminosCondicionesComponent } from './pages/terminos-condiciones/terminos-condiciones.component';
-import { ErrorComponent } from './pages/error/error.component';
-
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    loadComponent: () =>
+      import('./pages/home/home.component').then((c) => c.HomeComponent),
     data: {
       breadcrumb: { label: 'Inicio', info: { url: '' } },
     },
   },
   {
     path: 'login',
-    component: LoginComponent,
+    loadComponent: () =>
+      import('./pages/auth/login/login.component').then(
+        (c) => c.LoginComponent
+      ),
     data: {
       breadcrumb: { label: 'Iniciar Sesión', info: { url: 'login' } },
     },
   },
   {
     path: 'register',
-    component: RegisterComponent,
+    loadComponent: () =>
+      import('./pages/auth/register/register.component').then(
+        (c) => c.RegisterComponent
+      ),
     data: {
       breadcrumb: { label: 'Crear Cuenta', info: { url: 'register' } },
     },
   },
   {
     path: 'plans',
-    component: PlanesComponent,
+    loadComponent: () =>
+      import('./pages/planes/planes.component').then((c) => c.PlanesComponent),
     data: {
       breadcrumb: { label: 'Planes', info: { url: 'plans' } },
     },
   },
   {
     path: 'privacy-policy',
-    component: PoliticaPrivacidadComponent,
+    loadComponent: () =>
+      import('./pages/politica-privacidad/politica-privacidad.component').then(
+        (c) => c.PoliticaPrivacidadComponent
+      ),
     data: {
       breadcrumb: {
         label: 'Política de Privacidad',
@@ -49,7 +52,10 @@ export const routes: Routes = [
   },
   {
     path: 'terms-conditions',
-    component: TerminosCondicionesComponent,
+    loadComponent: () =>
+      import(
+        './pages/terminos-condiciones/terminos-condiciones.component'
+      ).then((c) => c.TerminosCondicionesComponent),
     data: {
       breadcrumb: {
         label: 'Términos y Condiciones',
@@ -59,6 +65,7 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    component: ErrorComponent,
+    loadComponent: () =>
+      import('./pages/error/error.component').then((c) => c.ErrorComponent),
   },
 ];

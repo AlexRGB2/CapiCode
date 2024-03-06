@@ -14,6 +14,7 @@ import { ScrollToTopButtonComponent } from './components/scroll-to-top-button/sc
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
