@@ -37,4 +37,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
+
+  const imagen = document.getElementById("cursos");
+  const cargarImagen = (entradas, observador) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add("visible");
+      } else {
+        entrada.target.classList.remove("visible");
+      }
+    });
+  };
+
+  const observador = new IntersectionObserver(cargarImagen, {
+    root: null,
+    rootMargin: "0px 0px 0px 0px",
+    threshold: 0.3,
+  });
+
+  observador.observe(imagen);
 });
