@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Modo Oscuro
   let btn = document.getElementById("darkBtn");
   if (
     localStorage.getItem("color-theme") === "dark" ||
