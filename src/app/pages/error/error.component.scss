@@ -24,19 +24,22 @@ img {
   max-width: 100%;
 }
 
-@media only screen and (max-width: 300px) {
+@media (width < 510px) {
   .contenedor {
+    transition: ease;
+    transition-duration: 1s;
     width: 150px;
     height: 150px;
   }
 
   img {
+
     width: 100%;
   }
 }
 
 @media (width < 640px) {
-  p {
+  .body p {
     text-align: center;
     text-wrap: wrap;
     margin: 10px;
