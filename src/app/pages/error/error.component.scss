@@ -26,11 +26,19 @@ img {
 
 @media only screen and (max-width: 300px) {
   .contenedor {
-      width: 150px;
-      height: 150px;
+    width: 150px;
+    height: 150px;
   }
 
   img {
-      width: 100%;
+    width: 100%;
+  }
+}
+
+@media (width < 640px) {
+  p {
+    text-align: center;
+    text-wrap: wrap;
+    margin: 10px;
   }
 }

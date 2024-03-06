@@ -151,12 +151,13 @@
   }
 }
 
+::ng-deep.gsc-control-cse {
+  border-radius: 30px;
+  zoom: 0.8;
+}
+
 @media (width < 640px) {
   .switch {
     margin-bottom: 12px;
-  }
-
-  ::ng-deep.gsc-control-cse {
-    margin-top: 12px;
   }
 }
