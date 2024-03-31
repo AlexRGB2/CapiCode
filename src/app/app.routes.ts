@@ -30,6 +30,19 @@ export const routes: Routes = [
     },
   },
   {
+    path: 'category/:categoria',
+    loadComponent: () =>
+      import('./pages/curso-category/curso-category.component').then(
+        (c) => c.CursoCategoryComponent
+      ),
+    data: {
+      breadcrumb: {
+        label: '',
+        info: { url: '' },
+      },
+    },
+  },
+  {
     path: 'plans',
     loadComponent: () =>
       import('./pages/planes/planes.component').then((c) => c.PlanesComponent),

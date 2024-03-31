@@ -1,0 +1,314 @@
+{
+  "categoria": {
+    "lenguajes-programacion": [
+      {
+        "title": "Curso de Python",
+        "description": "Aprende Python desde cero",
+        "price": "99.99",
+        "image": "https://example.com/python_image"
+      },
+      {
+        "title": "Curso de Java",
+        "description": "Aprende Java para desarrollo de aplicaciones",
+        "price": "149.99",
+        "image": "https://example.com/java_image"
+      },
+      {
+        "title": "Curso de C++",
+        "description": "Aprende C++ para programación de sistemas",
+        "price": "129.99",
+        "image": "https://example.com/cpp_image"
+      },
+      {
+        "title": "Curso de JavaScript",
+        "description": "Aprende JavaScript para desarrollo web",
+        "price": "79.99",
+        "image": "https://example.com/js_image"
+      },
+      {
+        "title": "Curso de Ruby",
+        "description": "Aprende Ruby para desarrollo de aplicaciones",
+        "price": "89.99",
+        "image": "https://example.com/ruby_image"
+      },
+      {
+        "title": "Curso de PHP",
+        "description": "Aprende PHP para desarrollo web",
+        "price": "69.99",
+        "image": "https://example.com/php_image"
+      },
+      {
+        "title": "Curso de C#",
+        "description": "Aprende C# para desarrollo de aplicaciones",
+        "price": "139.99",
+        "image": "https://example.com/csharp_image"
+      },
+      {
+        "title": "Curso de Swift",
+        "description": "Aprende Swift para desarrollo de aplicaciones iOS",
+        "price": "159.99",
+        "image": "https://example.com/swift_image"
+      },
+      {
+        "title": "Curso de Go",
+        "description": "Aprende Go para programación concurrente",
+        "price": "109.99",
+        "image": "https://example.com/go_image"
+      },
+      {
+        "title": "Curso de Rust",
+        "description": "Aprende Rust para programación de sistemas segura",
+        "price": "119.99",
+        "image": "https://example.com/rust_image"
+      }
+    ],
+    "desarrollo-movil": [
+      {
+        "title": "Desarrollo de aplicaciones móviles con React Native",
+        "description": "Aprende a crear aplicaciones móviles utilizando React Native",
+        "price": "99.99",
+        "image": "https://example.com/reactnative.jpg"
+      },
+      {
+        "title": "Desarrollo de aplicaciones móviles con Flutter",
+        "description": "Descubre cómo desarrollar aplicaciones móviles utilizando Flutter",
+        "price": "129.99",
+        "image": "https://example.com/flutter.jpg"
+      },
+      {
+        "title": "Desarrollo de aplicaciones móviles con Swift",
+        "description": "Aprende a crear aplicaciones móviles para iOS utilizando Swift",
+        "price": "149.99",
+        "image": "https://example.com/swift.jpg"
+      },
+      {
+        "title": "Desarrollo de aplicaciones móviles con Kotlin",
+        "description": "Descubre cómo desarrollar aplicaciones móviles para Android utilizando Kotlin",
+        "price": "119.99",
+        "image": "https://example.com/kotlin.jpg"
+      },
+      {
+        "title": "Desarrollo de aplicaciones móviles con Ionic",
+        "description": "Aprende a crear aplicaciones móviles multiplataforma utilizando Ionic",
+        "price": "89.99",
+        "image": "https://example.com/ionic.jpg"
+      },
+      {
+        "title": "Desarrollo de aplicaciones móviles con Xamarin",
+        "description": "Descubre cómo desarrollar aplicaciones móviles multiplataforma utilizando Xamarin",
+        "price": "109.99",
+        "image": "https://example.com/xamarin.jpg"
+      },
+      {
+        "title": "Desarrollo de aplicaciones móviles con Java",
+        "description": "Aprende a crear aplicaciones móviles para Android utilizando Java",
+        "price": "99.99",
+        "image": "https://example.com/java.jpg"
+      },
+      {
+        "title": "Desarrollo de aplicaciones móviles con Objective-C",
+        "description": "Descubre cómo desarrollar aplicaciones móviles para iOS utilizando Objective-C",
+        "price": "139.99",
+        "image": "https://example.com/objectivec.jpg"
+      },
+      {
+        "title": "Desarrollo de aplicaciones móviles con PhoneGap",
+        "description": "Aprende a crear aplicaciones móviles multiplataforma utilizando PhoneGap",
+        "price": "79.99",
+        "image": "https://example.com/phonegap.jpg"
+      },
+      {
+        "title": "Desarrollo de aplicaciones móviles con C#",
+        "description": "Descubre cómo desarrollar aplicaciones móviles para Windows utilizando C#",
+        "price": "119.99",
+        "image": "https://example.com/csharp.jpg"
+      }
+    ],
+    "testing": [
+      {
+        "title": "Curso de Pruebas en el Desarrollo de Software",
+        "description": "Aprende las mejores prácticas para realizar pruebas de software",
+        "price": "$99.99",
+        "image": "https://example.com/curso1.jpg"
+      },
+      {
+        "title": "Curso de Automatización de Pruebas",
+        "description": "Descubre cómo automatizar tus pruebas de software",
+        "price": "$149.99",
+        "image": "https://example.com/curso2.jpg"
+      },
+      {
+        "title": "Curso de Pruebas de Rendimiento",
+        "description": "Aprende a medir y mejorar el rendimiento de tus aplicaciones",
+        "price": "$129.99",
+        "image": "https://example.com/curso3.jpg"
+      },
+      {
+        "title": "Curso de Pruebas de Seguridad",
+        "description": "Descubre las técnicas para asegurar la calidad de tus sistemas",
+        "price": "$179.99",
+        "image": "https://example.com/curso4.jpg"
+      },
+      {
+        "title": "Curso de Pruebas de Usabilidad",
+        "description": "Aprende a evaluar la usabilidad de tus aplicaciones",
+        "price": "$109.99",
+        "image": "https://example.com/curso5.jpg"
+      },
+      {
+        "title": "Curso de Pruebas de Integración",
+        "description": "Descubre cómo realizar pruebas de integración efectivas",
+        "price": "$119.99",
+        "image": "https://example.com/curso6.jpg"
+      },
+      {
+        "title": "Curso de Pruebas de Regresión",
+        "description": "Aprende a identificar y solucionar problemas de regresión",
+        "price": "$99.99",
+        "image": "https://example.com/curso7.jpg"
+      },
+      {
+        "title": "Curso de Pruebas Ágiles",
+        "description": "Descubre cómo realizar pruebas en un entorno ágil",
+        "price": "$139.99",
+        "image": "https://example.com/curso8.jpg"
+      },
+      {
+        "title": "Curso de Pruebas Exploratorias",
+        "description": "Aprende a descubrir errores mediante la exploración del software",
+        "price": "$119.99",
+        "image": "https://example.com/curso9.jpg"
+      },
+      {
+        "title": "Curso de Pruebas de Aceptación",
+        "description": "Descubre cómo validar que el software cumple con los requisitos",
+        "price": "$149.99",
+        "image": "https://example.com/curso10.jpg"
+      }
+    ],
+    "diseno": [
+      {
+        "title": "Diseño de Interfaces de Usuario",
+        "description": "Curso de diseño de interfaces de usuario en software",
+        "price": "250",
+        "image": "https://example.com/ui_design.jpg"
+      },
+      {
+        "title": "Diseño de Experiencia de Usuario",
+        "description": "Curso de diseño de experiencia de usuario en software",
+        "price": "300",
+        "image": "https://example.com/ux_design.jpg"
+      },
+      {
+        "title": "Arquitectura de Información",
+        "description": "Curso de arquitectura de información en software",
+        "price": "200",
+        "image": "https://example.com/information_architecture.jpg"
+      },
+      {
+        "title": "Diseño de Interacción",
+        "description": "Curso de diseño de interacción en software",
+        "price": "280",
+        "image": "https://example.com/interaction_design.jpg"
+      },
+      {
+        "title": "Usabilidad y Accesibilidad",
+        "description": "Curso de usabilidad y accesibilidad en software",
+        "price": "180",
+        "image": "https://example.com/usability_accessibility.jpg"
+      },
+      {
+        "title": "Diseño Centrado en el Usuario",
+        "description": "Curso de diseño centrado en el usuario en software",
+        "price": "320",
+        "image": "https://example.com/user_centered_design.jpg"
+      },
+      {
+        "title": "Visualización de Datos",
+        "description": "Curso de visualización de datos en software",
+        "price": "270",
+        "image": "https://example.com/data_visualization.jpg"
+      },
+      {
+        "title": "Diseño de Servicios",
+        "description": "Curso de diseño de servicios en software",
+        "price": "350",
+        "image": "https://example.com/service_design.jpg"
+      },
+      {
+        "title": "Gestión de Proyectos de Diseño",
+        "description": "Curso de gestión de proyectos de diseño en software",
+        "price": "230",
+        "image": "https://example.com/design_project_management.jpg"
+      },
+      {
+        "title": "Diseño de Experiencia de Usuario Móvil",
+        "description": "Curso de diseño de experiencia de usuario móvil en software",
+        "price": "280",
+        "image": "https://example.com/mobile_ux_design.jpg"
+      }
+    ],
+    "desarrollo-web": [
+      {
+        "title": "Curso de Desarrollo Web Completo",
+        "description": "Aprende a crear sitios web desde cero con HTML, CSS, JavaScript y más.",
+        "price": "149.99",
+        "image": "https://example.com/curso1.jpg"
+      },
+      {
+        "title": "Curso de Diseño Web Responsivo",
+        "description": "Descubre cómo crear sitios web que se adapten a cualquier dispositivo.",
+        "price": "99.99",
+        "image": "https://example.com/curso2.jpg"
+      },
+      {
+        "title": "Curso de JavaScript Avanzado",
+        "description": "Domina las técnicas avanzadas de programación con JavaScript.",
+        "price": "129.99",
+        "image": "https://example.com/curso3.jpg"
+      },
+      {
+        "title": "Curso de Desarrollo de Aplicaciones Web",
+        "description": "Aprende a crear aplicaciones web con tecnologías como Node.js y MongoDB.",
+        "price": "179.99",
+        "image": "https://example.com/curso4.jpg"
+      },
+      {
+        "title": "Curso de SEO para Desarrolladores",
+        "description": "Optimiza tus sitios web para los motores de búsqueda y mejora su visibilidad en línea.",
+        "price": "79.99",
+        "image": "https://example.com/curso5.jpg"
+      },
+      {
+        "title": "Curso de WordPress para Principiantes",
+        "description": "Aprende a crear y administrar sitios web con WordPress.",
+        "price": "89.99",
+        "image": "https://example.com/curso6.jpg"
+      },
+      {
+        "title": "Curso de Desarrollo de E-commerce",
+        "description": "Crea tu propia tienda en línea con tecnologías como Shopify y WooCommerce.",
+        "price": "149.99",
+        "image": "https://example.com/curso7.jpg"
+      },
+      {
+        "title": "Curso de Programación en PHP",
+        "description": "Aprende a programar en PHP y crea aplicaciones web dinámicas.",
+        "price": "109.99",
+        "image": "https://example.com/curso8.jpg"
+      },
+      {
+        "title": "Curso de Desarrollo de Aplicaciones Móviles",
+        "description": "Descubre cómo crear aplicaciones móviles para iOS y Android.",
+        "price": "199.99",
+        "image": "https://example.com/curso9.jpg"
+      },
+      {
+        "title": "Curso de Seguridad Web",
+        "description": "Protege tus sitios web de ataques y vulnerabilidades.",
+        "price": "139.99",
+        "image": "https://example.com/curso10.jpg"
+      }
+    ]
+  }
+}
