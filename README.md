@@ -1,3 +1,5 @@
+[![Deploy to Firebase Hosting on merge](https://github.com/AlexRGB2/CapiCode/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/AlexRGB2/CapiCode/actions/workflows/firebase-hosting-merge.yml)
+
 # CapiCode
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
