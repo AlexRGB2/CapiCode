@@ -2,312 +2,412 @@
   "categoria": {
     "lenguajes-programacion": [
       {
-        "title": "Curso de Python",
-        "description": "Aprende Python desde cero",
-        "price": "99.99",
-        "image": "https://example.com/python_image"
+        "title": "Curso de programación en Python",
+        "description": "Aprende a programar en Python desde cero con este completo curso.",
+        "price": "49.99",
+        "image": "https://example.com/python.jpg",
+        "qualification": 4.5,
+        "video": "nKPbfIU442g"
       },
       {
-        "title": "Curso de Java",
-        "description": "Aprende Java para desarrollo de aplicaciones",
-        "price": "149.99",
-        "image": "https://example.com/java_image"
+        "title": "Curso de programación en Java",
+        "description": "Descubre el lenguaje de programación Java y aprende a desarrollar aplicaciones.",
+        "price": "59.99",
+        "image": "https://example.com/java.jpg",
+        "qualification": 4.2,
+        "video": "https://example.com/java-video"
       },
       {
-        "title": "Curso de C++",
-        "description": "Aprende C++ para programación de sistemas",
-        "price": "129.99",
-        "image": "https://example.com/cpp_image"
+        "title": "Curso de programación en C++",
+        "description": "Aprende a programar en C++ y desarrolla aplicaciones eficientes y de alto rendimiento.",
+        "price": "54.99",
+        "image": "https://example.com/cpp.jpg",
+        "qualification": 4.0,
+        "video": "https://example.com/cpp-video"
       },
       {
-        "title": "Curso de JavaScript",
-        "description": "Aprende JavaScript para desarrollo web",
-        "price": "79.99",
-        "image": "https://example.com/js_image"
+        "title": "Curso de programación en JavaScript",
+        "description": "Domina el lenguaje de programación JavaScript y crea aplicaciones web interactivas.",
+        "price": "44.99",
+        "image": "https://example.com/javascript.jpg",
+        "qualification": 4.7,
+        "video": "https://example.com/javascript-video"
       },
       {
-        "title": "Curso de Ruby",
-        "description": "Aprende Ruby para desarrollo de aplicaciones",
-        "price": "89.99",
-        "image": "https://example.com/ruby_image"
+        "title": "Curso de programación en C#",
+        "description": "Aprende a programar en C# y desarrolla aplicaciones para Windows y Microsoft .NET.",
+        "price": "49.99",
+        "image": "https://example.com/csharp.jpg",
+        "qualification": 4.3,
+        "video": "https://example.com/csharp-video"
       },
       {
-        "title": "Curso de PHP",
-        "description": "Aprende PHP para desarrollo web",
-        "price": "69.99",
-        "image": "https://example.com/php_image"
+        "title": "Curso de programación en Ruby",
+        "description": "Descubre el lenguaje de programación Ruby y aprende a desarrollar aplicaciones web.",
+        "price": "39.99",
+        "image": "https://example.com/ruby.jpg",
+        "qualification": 4.1,
+        "video": "https://example.com/ruby-video"
       },
       {
-        "title": "Curso de C#",
-        "description": "Aprende C# para desarrollo de aplicaciones",
-        "price": "139.99",
-        "image": "https://example.com/csharp_image"
+        "title": "Curso de programación en PHP",
+        "description": "Aprende a programar en PHP y crea aplicaciones web dinámicas y de alto rendimiento.",
+        "price": "44.99",
+        "image": "https://example.com/php.jpg",
+        "qualification": 4.4,
+        "video": "https://example.com/php-video"
       },
       {
-        "title": "Curso de Swift",
-        "description": "Aprende Swift para desarrollo de aplicaciones iOS",
-        "price": "159.99",
-        "image": "https://example.com/swift_image"
+        "title": "Curso de programación en Swift",
+        "description": "Descubre el lenguaje de programación Swift y crea aplicaciones para iOS y macOS.",
+        "price": "59.99",
+        "image": "https://example.com/swift.jpg",
+        "qualification": 4.6,
+        "video": "https://example.com/swift-video"
       },
       {
-        "title": "Curso de Go",
-        "description": "Aprende Go para programación concurrente",
-        "price": "109.99",
-        "image": "https://example.com/go_image"
+        "title": "Curso de programación en Go",
+        "description": "Aprende a programar en Go y desarrolla aplicaciones concurrentes y eficientes.",
+        "price": "54.99",
+        "image": "https://example.com/go.jpg",
+        "qualification": 4.0,
+        "video": "https://example.com/go-video"
       },
       {
-        "title": "Curso de Rust",
-        "description": "Aprende Rust para programación de sistemas segura",
-        "price": "119.99",
-        "image": "https://example.com/rust_image"
+        "title": "Curso de programación en Kotlin",
+        "description": "Descubre el lenguaje de programación Kotlin y crea aplicaciones para Android.",
+        "price": "49.99",
+        "image": "https://example.com/kotlin.jpg",
+        "qualification": 4.5,
+        "video": "https://example.com/kotlin-video"
       }
     ],
     "desarrollo-movil": [
       {
-        "title": "Desarrollo de aplicaciones móviles con React Native",
-        "description": "Aprende a crear aplicaciones móviles utilizando React Native",
+        "title": "Curso de Desarrollo Móvil con React Native",
+        "description": "Aprende a crear aplicaciones móviles utilizando React Native, un framework de desarrollo de aplicaciones móviles multiplataforma.",
         "price": "99.99",
-        "image": "https://example.com/reactnative.jpg"
+        "image": "https://example.com/react-native-course.jpg",
+        "qualification": 4.5,
+        "video": "https://example.com/react-native-course-video"
       },
       {
-        "title": "Desarrollo de aplicaciones móviles con Flutter",
-        "description": "Descubre cómo desarrollar aplicaciones móviles utilizando Flutter",
-        "price": "129.99",
-        "image": "https://example.com/flutter.jpg"
-      },
-      {
-        "title": "Desarrollo de aplicaciones móviles con Swift",
-        "description": "Aprende a crear aplicaciones móviles para iOS utilizando Swift",
+        "title": "Curso de Desarrollo Móvil con Flutter",
+        "description": "Descubre cómo construir aplicaciones móviles de alta calidad utilizando Flutter, un framework de desarrollo móvil de código abierto.",
         "price": "149.99",
-        "image": "https://example.com/swift.jpg"
+        "image": "https://example.com/flutter-course.jpg",
+        "qualification": 4.8,
+        "video": "https://example.com/flutter-course-video"
       },
       {
-        "title": "Desarrollo de aplicaciones móviles con Kotlin",
-        "description": "Descubre cómo desarrollar aplicaciones móviles para Android utilizando Kotlin",
-        "price": "119.99",
-        "image": "https://example.com/kotlin.jpg"
-      },
-      {
-        "title": "Desarrollo de aplicaciones móviles con Ionic",
-        "description": "Aprende a crear aplicaciones móviles multiplataforma utilizando Ionic",
-        "price": "89.99",
-        "image": "https://example.com/ionic.jpg"
-      },
-      {
-        "title": "Desarrollo de aplicaciones móviles con Xamarin",
-        "description": "Descubre cómo desarrollar aplicaciones móviles multiplataforma utilizando Xamarin",
-        "price": "109.99",
-        "image": "https://example.com/xamarin.jpg"
-      },
-      {
-        "title": "Desarrollo de aplicaciones móviles con Java",
-        "description": "Aprende a crear aplicaciones móviles para Android utilizando Java",
-        "price": "99.99",
-        "image": "https://example.com/java.jpg"
-      },
-      {
-        "title": "Desarrollo de aplicaciones móviles con Objective-C",
-        "description": "Descubre cómo desarrollar aplicaciones móviles para iOS utilizando Objective-C",
-        "price": "139.99",
-        "image": "https://example.com/objectivec.jpg"
-      },
-      {
-        "title": "Desarrollo de aplicaciones móviles con PhoneGap",
-        "description": "Aprende a crear aplicaciones móviles multiplataforma utilizando PhoneGap",
+        "title": "Curso de Desarrollo Móvil con Ionic",
+        "description": "Aprende a crear aplicaciones móviles híbridas utilizando Ionic, un framework de desarrollo móvil de código abierto basado en Angular.",
         "price": "79.99",
-        "image": "https://example.com/phonegap.jpg"
+        "image": "https://example.com/ionic-course.jpg",
+        "qualification": 4.2,
+        "video": "https://example.com/ionic-course-video"
       },
       {
-        "title": "Desarrollo de aplicaciones móviles con C#",
-        "description": "Descubre cómo desarrollar aplicaciones móviles para Windows utilizando C#",
-        "price": "119.99",
-        "image": "https://example.com/csharp.jpg"
+        "title": "Curso de Desarrollo Móvil con Xamarin",
+        "description": "Descubre cómo crear aplicaciones móviles nativas para iOS y Android utilizando Xamarin, un framework de desarrollo móvil de Microsoft.",
+        "price": "129.99",
+        "image": "https://example.com/xamarin-course.jpg",
+        "qualification": 4.0,
+        "video": "https://example.com/xamarin-course-video"
+      },
+      {
+        "title": "Curso de Desarrollo Móvil con NativeScript",
+        "description": "Aprende a crear aplicaciones móviles nativas utilizando NativeScript, un framework de desarrollo móvil de código abierto basado en JavaScript.",
+        "price": "89.99",
+        "image": "https://example.com/nativescript-course.jpg",
+        "qualification": 4.3,
+        "video": "https://example.com/nativescript-course-video"
+      },
+      {
+        "title": "Curso de Desarrollo Móvil con PhoneGap",
+        "description": "Descubre cómo crear aplicaciones móviles multiplataforma utilizando PhoneGap, un framework de desarrollo móvil de código abierto basado en HTML, CSS y JavaScript.",
+        "price": "69.99",
+        "image": "https://example.com/phonegap-course.jpg",
+        "qualification": 3.9,
+        "video": "https://example.com/phonegap-course-video"
+      },
+      {
+        "title": "Curso de Desarrollo Móvil con Framework7",
+        "description": "Aprende a crear aplicaciones móviles nativas y web utilizando Framework7, un framework de desarrollo móvil de código abierto basado en HTML, CSS y JavaScript.",
+        "price": "59.99",
+        "image": "https://example.com/framework7-course.jpg",
+        "qualification": 4.1,
+        "video": "https://example.com/framework7-course-video"
+      },
+      {
+        "title": "Curso de Desarrollo Móvil con jQuery Mobile",
+        "description": "Descubre cómo crear aplicaciones móviles web utilizando jQuery Mobile, un framework de desarrollo móvil de código abierto basado en HTML, CSS y JavaScript.",
+        "price": "49.99",
+        "image": "https://example.com/jquery-mobile-course.jpg",
+        "qualification": 3.7,
+        "video": "https://example.com/jquery-mobile-course-video"
+      },
+      {
+        "title": "Curso de Desarrollo Móvil con Onsen UI",
+        "description": "Aprende a crear aplicaciones móviles híbridas utilizando Onsen UI, un framework de desarrollo móvil de código abierto basado en HTML, CSS y JavaScript.",
+        "price": "79.99",
+        "image": "https://example.com/onsen-ui-course.jpg",
+        "qualification": 4.0,
+        "video": "https://example.com/onsen-ui-course-video"
+      },
+      {
+        "title": "Curso de Desarrollo Móvil con Sencha Touch",
+        "description": "Descubre cómo crear aplicaciones móviles web utilizando Sencha Touch, un framework de desarrollo móvil de código abierto basado en HTML, CSS y JavaScript.",
+        "price": "69.99",
+        "image": "https://example.com/sencha-touch-course.jpg",
+        "qualification": 3.8,
+        "video": "https://example.com/sencha-touch-course-video"
       }
     ],
     "testing": [
       {
-        "title": "Curso de Pruebas en el Desarrollo de Software",
-        "description": "Aprende las mejores prácticas para realizar pruebas de software",
-        "price": "$99.99",
-        "image": "https://example.com/curso1.jpg"
+        "title": "Curso de Testing de Software",
+        "description": "Aprende las mejores técnicas y herramientas de testing de software en este curso práctico.",
+        "price": "199.99",
+        "image": "https://example.com/curso-testing-software.jpg",
+        "qualification": 4.5,
+        "video": "https://example.com/curso-testing-software-video"
       },
       {
         "title": "Curso de Automatización de Pruebas",
-        "description": "Descubre cómo automatizar tus pruebas de software",
-        "price": "$149.99",
-        "image": "https://example.com/curso2.jpg"
+        "description": "Descubre cómo automatizar pruebas de software con las principales herramientas del mercado.",
+        "price": "249.99",
+        "image": "https://example.com/curso-automatizacion-pruebas.jpg",
+        "qualification": 4.2,
+        "video": "https://example.com/curso-automatizacion-pruebas-video"
       },
       {
         "title": "Curso de Pruebas de Rendimiento",
-        "description": "Aprende a medir y mejorar el rendimiento de tus aplicaciones",
-        "price": "$129.99",
-        "image": "https://example.com/curso3.jpg"
+        "description": "Aprende a realizar pruebas de rendimiento y optimización en tus proyectos de software.",
+        "price": "179.99",
+        "image": "https://example.com/curso-pruebas-rendimiento.jpg",
+        "qualification": 4.3,
+        "video": "https://example.com/curso-pruebas-rendimiento-video"
       },
       {
         "title": "Curso de Pruebas de Seguridad",
-        "description": "Descubre las técnicas para asegurar la calidad de tus sistemas",
-        "price": "$179.99",
-        "image": "https://example.com/curso4.jpg"
+        "description": "Descubre las técnicas y herramientas para realizar pruebas de seguridad en aplicaciones y sistemas.",
+        "price": "299.99",
+        "image": "https://example.com/curso-pruebas-seguridad.jpg",
+        "qualification": 4.7,
+        "video": "https://example.com/curso-pruebas-seguridad-video"
       },
       {
-        "title": "Curso de Pruebas de Usabilidad",
-        "description": "Aprende a evaluar la usabilidad de tus aplicaciones",
-        "price": "$109.99",
-        "image": "https://example.com/curso5.jpg"
-      },
-      {
-        "title": "Curso de Pruebas de Integración",
-        "description": "Descubre cómo realizar pruebas de integración efectivas",
-        "price": "$119.99",
-        "image": "https://example.com/curso6.jpg"
-      },
-      {
-        "title": "Curso de Pruebas de Regresión",
-        "description": "Aprende a identificar y solucionar problemas de regresión",
-        "price": "$99.99",
-        "image": "https://example.com/curso7.jpg"
-      },
-      {
-        "title": "Curso de Pruebas Ágiles",
-        "description": "Descubre cómo realizar pruebas en un entorno ágil",
-        "price": "$139.99",
-        "image": "https://example.com/curso8.jpg"
+        "title": "Curso de Pruebas Funcionales",
+        "description": "Aprende a diseñar y ejecutar pruebas funcionales para garantizar la calidad de tus aplicaciones.",
+        "price": "199.99",
+        "image": "https://example.com/curso-pruebas-funcionales.jpg",
+        "qualification": 4.4,
+        "video": "https://example.com/curso-pruebas-funcionales-video"
       },
       {
         "title": "Curso de Pruebas Exploratorias",
-        "description": "Aprende a descubrir errores mediante la exploración del software",
-        "price": "$119.99",
-        "image": "https://example.com/curso9.jpg"
+        "description": "Descubre la importancia de las pruebas exploratorias y cómo aplicarlas en tus proyectos.",
+        "price": "149.99",
+        "image": "https://example.com/curso-pruebas-exploratorias.jpg",
+        "qualification": 4.1,
+        "video": "https://example.com/curso-pruebas-exploratorias-video"
+      },
+      {
+        "title": "Curso de Pruebas de Usabilidad",
+        "description": "Aprende a realizar pruebas de usabilidad para mejorar la experiencia del usuario en tus aplicaciones.",
+        "price": "179.99",
+        "image": "https://example.com/curso-pruebas-usabilidad.jpg",
+        "qualification": 4.0,
+        "video": "https://example.com/curso-pruebas-usabilidad-video"
+      },
+      {
+        "title": "Curso de Pruebas de Regresión",
+        "description": "Descubre cómo hacer pruebas de regresión efectivas para evitar la introducción de errores en tus proyectos.",
+        "price": "149.99",
+        "image": "https://example.com/curso-pruebas-regresion.jpg",
+        "qualification": 4.6,
+        "video": "https://example.com/curso-pruebas-regresion-video"
+      },
+      {
+        "title": "Curso de Pruebas de Integración",
+        "description": "Aprende a realizar pruebas de integración para asegurar el correcto funcionamiento de tus componentes de software.",
+        "price": "199.99",
+        "image": "https://example.com/curso-pruebas-integracion.jpg",
+        "qualification": 4.2,
+        "video": "https://example.com/curso-pruebas-integracion-video"
       },
       {
         "title": "Curso de Pruebas de Aceptación",
-        "description": "Descubre cómo validar que el software cumple con los requisitos",
-        "price": "$149.99",
-        "image": "https://example.com/curso10.jpg"
+        "description": "Descubre las mejores prácticas para realizar pruebas de aceptación en proyectos ágiles de desarrollo de software.",
+        "price": "179.99",
+        "image": "https://example.com/curso-pruebas-aceptacion.jpg",
+        "qualification": 4.3,
+        "video": "https://example.com/curso-pruebas-aceptacion-video"
       }
     ],
     "diseno": [
       {
-        "title": "Diseño de Interfaces de Usuario",
-        "description": "Curso de diseño de interfaces de usuario en software",
-        "price": "250",
-        "image": "https://example.com/ui_design.jpg"
+        "title": "Diseño de Interfaces de Software",
+        "description": "Aprende a diseñar interfaces de software efectivas y atractivas.",
+        "price": "99.99",
+        "image": "https://example.com/images/design.jpg",
+        "qualification": 4.5,
+        "video": "https://example.com/videos/design.mp4"
       },
       {
-        "title": "Diseño de Experiencia de Usuario",
-        "description": "Curso de diseño de experiencia de usuario en software",
-        "price": "300",
-        "image": "https://example.com/ux_design.jpg"
+        "title": "Principios de Diseño de Interfaces",
+        "description": "Descubre los principios fundamentales del diseño de interfaces de software.",
+        "price": "79.99",
+        "image": "https://example.com/images/principles.jpg",
+        "qualification": 4.2,
+        "video": "https://example.com/videos/principles.mp4"
       },
       {
-        "title": "Arquitectura de Información",
-        "description": "Curso de arquitectura de información en software",
-        "price": "200",
-        "image": "https://example.com/information_architecture.jpg"
+        "title": "Usabilidad y Experiencia de Usuario",
+        "description": "Mejora la usabilidad y experiencia de usuario en tus diseños de software.",
+        "price": "89.99",
+        "image": "https://example.com/images/usability.jpg",
+        "qualification": 4.7,
+        "video": "https://example.com/videos/usability.mp4"
       },
       {
-        "title": "Diseño de Interacción",
-        "description": "Curso de diseño de interacción en software",
-        "price": "280",
-        "image": "https://example.com/interaction_design.jpg"
+        "title": "Diseño Responsivo",
+        "description": "Aprende a crear interfaces de software que se adapten a diferentes dispositivos.",
+        "price": "69.99",
+        "image": "https://example.com/images/responsive.jpg",
+        "qualification": 4.0,
+        "video": "https://example.com/videos/responsive.mp4"
       },
       {
-        "title": "Usabilidad y Accesibilidad",
-        "description": "Curso de usabilidad y accesibilidad en software",
-        "price": "180",
-        "image": "https://example.com/usability_accessibility.jpg"
+        "title": "Accesibilidad en el Diseño de Interfaces",
+        "description": "Incorpora principios de accesibilidad en tus diseños de software.",
+        "price": "59.99",
+        "image": "https://example.com/images/accessibility.jpg",
+        "qualification": 4.3,
+        "video": "https://example.com/videos/accessibility.mp4"
+      },
+      {
+        "title": "Psicología del Usuario",
+        "description": "Comprende cómo los usuarios interactúan con las interfaces de software.",
+        "price": "79.99",
+        "image": "https://example.com/images/psychology.jpg",
+        "qualification": 4.1,
+        "video": "https://example.com/videos/psychology.mp4"
+      },
+      {
+        "title": "Diseño de Interfaces para Dispositivos Móviles",
+        "description": "Aprende a crear interfaces optimizadas para dispositivos móviles.",
+        "price": "89.99",
+        "image": "https://example.com/images/mobile.jpg",
+        "qualification": 4.6,
+        "video": "https://example.com/videos/mobile.mp4"
       },
       {
         "title": "Diseño Centrado en el Usuario",
-        "description": "Curso de diseño centrado en el usuario en software",
-        "price": "320",
-        "image": "https://example.com/user_centered_design.jpg"
+        "description": "Enfoca tus diseños de software en las necesidades y expectativas de los usuarios.",
+        "price": "99.99",
+        "image": "https://example.com/images/user-centered.jpg",
+        "qualification": 4.8,
+        "video": "https://example.com/videos/user-centered.mp4"
       },
       {
-        "title": "Visualización de Datos",
-        "description": "Curso de visualización de datos en software",
-        "price": "270",
-        "image": "https://example.com/data_visualization.jpg"
+        "title": "Arquitectura de la Información",
+        "description": "Organiza y estructura la información en tus interfaces de software.",
+        "price": "69.99",
+        "image": "https://example.com/images/information-architecture.jpg",
+        "qualification": 4.4,
+        "video": "https://example.com/videos/information-architecture.mp4"
       },
       {
-        "title": "Diseño de Servicios",
-        "description": "Curso de diseño de servicios en software",
-        "price": "350",
-        "image": "https://example.com/service_design.jpg"
-      },
-      {
-        "title": "Gestión de Proyectos de Diseño",
-        "description": "Curso de gestión de proyectos de diseño en software",
-        "price": "230",
-        "image": "https://example.com/design_project_management.jpg"
-      },
-      {
-        "title": "Diseño de Experiencia de Usuario Móvil",
-        "description": "Curso de diseño de experiencia de usuario móvil en software",
-        "price": "280",
-        "image": "https://example.com/mobile_ux_design.jpg"
+        "title": "Diseño de Interacción",
+        "description": "Crea interacciones intuitivas y efectivas en tus interfaces de software.",
+        "price": "79.99",
+        "image": "https://example.com/images/interaction-design.jpg",
+        "qualification": 4.9,
+        "video": "https://example.com/videos/interaction-design.mp4"
       }
     ],
     "desarrollo-web": [
       {
-        "title": "Curso de Desarrollo Web Completo",
-        "description": "Aprende a crear sitios web desde cero con HTML, CSS, JavaScript y más.",
-        "price": "149.99",
-        "image": "https://example.com/curso1.jpg"
-      },
-      {
-        "title": "Curso de Diseño Web Responsivo",
-        "description": "Descubre cómo crear sitios web que se adapten a cualquier dispositivo.",
+        "title": "Curso de Desarrollo Web con Angular",
+        "description": "Aprende a desarrollar aplicaciones web con Angular, uno de los frameworks más populares en el ámbito del desarrollo web. Con este curso, dominarás los conceptos fundamentales de Angular y podrás construir aplicaciones web de alta calidad.",
         "price": "99.99",
-        "image": "https://example.com/curso2.jpg"
+        "image": "https://example.com/angular-course.jpg",
+        "qualification": 4.5,
+        "video": "https://example.com/angular-course-video"
       },
       {
-        "title": "Curso de JavaScript Avanzado",
-        "description": "Domina las técnicas avanzadas de programación con JavaScript.",
-        "price": "129.99",
-        "image": "https://example.com/curso3.jpg"
-      },
-      {
-        "title": "Curso de Desarrollo de Aplicaciones Web",
-        "description": "Aprende a crear aplicaciones web con tecnologías como Node.js y MongoDB.",
-        "price": "179.99",
-        "image": "https://example.com/curso4.jpg"
-      },
-      {
-        "title": "Curso de SEO para Desarrolladores",
-        "description": "Optimiza tus sitios web para los motores de búsqueda y mejora su visibilidad en línea.",
-        "price": "79.99",
-        "image": "https://example.com/curso5.jpg"
-      },
-      {
-        "title": "Curso de WordPress para Principiantes",
-        "description": "Aprende a crear y administrar sitios web con WordPress.",
+        "title": "Curso de Desarrollo Web con React",
+        "description": "Descubre React, la biblioteca de JavaScript para construir interfaces de usuario. En este curso, aprenderás los conceptos esenciales de React y cómo utilizarlo en el desarrollo de aplicaciones web.",
         "price": "89.99",
-        "image": "https://example.com/curso6.jpg"
+        "image": "https://example.com/react-course.jpg",
+        "qualification": 4.2,
+        "video": "https://example.com/react-course-video"
       },
       {
-        "title": "Curso de Desarrollo de E-commerce",
-        "description": "Crea tu propia tienda en línea con tecnologías como Shopify y WooCommerce.",
-        "price": "149.99",
-        "image": "https://example.com/curso7.jpg"
+        "title": "Curso de Desarrollo Web con Vue",
+        "description": "Aprende a construir aplicaciones web con Vue.js, el framework progresivo de JavaScript. En este curso, adquirirás los conocimientos necesarios para desarrollar proyectos web de forma eficiente y escalable.",
+        "price": "79.99",
+        "image": "https://example.com/vue-course.jpg",
+        "qualification": 4.7,
+        "video": "https://example.com/vue-course-video"
       },
       {
-        "title": "Curso de Programación en PHP",
-        "description": "Aprende a programar en PHP y crea aplicaciones web dinámicas.",
-        "price": "109.99",
-        "image": "https://example.com/curso8.jpg"
+        "title": "Curso de Desarrollo Web con Laravel",
+        "description": "Descubre Laravel, el framework de PHP para el desarrollo de aplicaciones web. Con este curso, aprenderás a utilizar Laravel para crear proyectos web robustos y de alto rendimiento.",
+        "price": "69.99",
+        "image": "https://example.com/laravel-course.jpg",
+        "qualification": 4.3,
+        "video": "https://example.com/laravel-course-video"
       },
       {
-        "title": "Curso de Desarrollo de Aplicaciones Móviles",
-        "description": "Descubre cómo crear aplicaciones móviles para iOS y Android.",
-        "price": "199.99",
-        "image": "https://example.com/curso9.jpg"
+        "title": "Curso de Desarrollo Web con Symfony",
+        "description": "Aprende a desarrollar aplicaciones web con Symfony, el framework de PHP utilizado por grandes empresas. En este curso, dominarás los conceptos fundamentales de Symfony y podrás construir proyectos web de calidad profesional.",
+        "price": "79.99",
+        "image": "https://example.com/symfony-course.jpg",
+        "qualification": 4.1,
+        "video": "https://example.com/symfony-course-video"
       },
       {
-        "title": "Curso de Seguridad Web",
-        "description": "Protege tus sitios web de ataques y vulnerabilidades.",
-        "price": "139.99",
-        "image": "https://example.com/curso10.jpg"
+        "title": "Curso de Desarrollo Web con Django",
+        "description": "Descubre Django, el framework de Python para el desarrollo web. En este curso, adquirirás los conocimientos necesarios para crear aplicaciones web robustas y escalables utilizando Django.",
+        "price": "89.99",
+        "image": "https://example.com/django-course.jpg",
+        "qualification": 4.6,
+        "video": "https://example.com/django-course-video"
+      },
+      {
+        "title": "Curso de Desarrollo Web con Flask",
+        "description": "Aprende a construir aplicaciones web con Flask, el microframework de Python. Con este curso, podrás desarrollar proyectos web de forma rápida y sencilla utilizando Flask.",
+        "price": "59.99",
+        "image": "https://example.com/flask-course.jpg",
+        "qualification": 4.4,
+        "video": "https://example.com/flask-course-video"
+      },
+      {
+        "title": "Curso de Desarrollo Web con Ruby on Rails",
+        "description": "Descubre Ruby on Rails, el framework de desarrollo web escrito en Ruby. En este curso, aprenderás a utilizar Ruby on Rails para crear aplicaciones web de manera eficiente y siguiendo las mejores prácticas.",
+        "price": "69.99",
+        "image": "https://example.com/rails-course.jpg",
+        "qualification": 4.0,
+        "video": "https://example.com/rails-course-video"
+      },
+      {
+        "title": "Curso de Desarrollo Web con Express.js",
+        "description": "Aprende a desarrollar aplicaciones web con Express.js, el framework de Node.js. Con este curso, adquirirás los conocimientos necesarios para construir proyectos web utilizando Express.js como backend.",
+        "price": "59.99",
+        "image": "https://example.com/express-course.jpg",
+        "qualification": 4.3,
+        "video": "https://example.com/express-course-video"
+      },
+      {
+        "title": "Curso de Desarrollo Web con Flask",
+        "description": "Aprende a construir aplicaciones web con Flask, el microframework de Python. Con este curso, podrás desarrollar proyectos web de forma rápida y sencilla utilizando Flask.",
+        "price": "59.99",
+        "image": "https://example.com/flask-course.jpg",
+        "qualification": 4.4,
+        "video": "https://example.com/flask-course-video"
       }
     ]
   }

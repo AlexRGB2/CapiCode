@@ -4,10 +4,11 @@ import { CategoriaService } from '../../core/services/categoria.service';
 import {
   ActivatedRoute,
   NavigationEnd,
+  NavigationExtras,
   Router,
   RouterModule,
 } from '@angular/router';
-import { filter, map } from 'rxjs';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-curso-category',
@@ -47,5 +48,23 @@ export class CursoCategoryComponent implements OnInit {
     this.categoriaService.getCategories(this.categoria).subscribe((resp) => {
       this.cursos = resp;
     });
+  }
+
+  /**
+   * Metodo que redirecciona a la
+   * información de un curso.
+   * @param curso - Datos a gestionar
+   */
+  setCourse(curso: Course) {
+    const navigationExtras: NavigationExtras = {
+      state: {
+        curso: curso,
+      },
+    };
+
+    this.router.navigate(
+      ['/category/' + this.categoria + '/' + curso.title],
+      navigationExtras
+    );
   }
 }
