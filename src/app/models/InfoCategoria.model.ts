@@ -3,4 +3,6 @@ export interface Course {
   description: string;
   price: number;
   image: string;
+  qualification: number;
+  video: string;
 }
