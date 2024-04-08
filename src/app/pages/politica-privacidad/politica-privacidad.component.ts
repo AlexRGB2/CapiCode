@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+  inject,
+} from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -9,9 +16,17 @@ import { Title } from '@angular/platform-browser';
   styleUrl: './politica-privacidad.component.scss',
 })
 export class PoliticaPrivacidadComponent implements OnInit {
-  constructor(private title: Title) {}
+  private el = inject(ElementRef);
+  private title = inject(Title);
 
   ngOnInit(): void {
     this.title.setTitle('CapiCode | Política de privacidad');
+  }
+
+  scrollToSection(sectionId: string) {
+    const element = this.el.nativeElement.querySelector(`#${sectionId}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 }

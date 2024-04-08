@@ -15,7 +15,7 @@
         "price": "59.99",
         "image": "https://example.com/java.jpg",
         "qualification": 4.2,
-        "video": "https://example.com/java-video"
+        "video": "W86KTBSiX2o"
       },
       {
         "title": "Curso de programación en C++",
@@ -23,7 +23,7 @@
         "price": "54.99",
         "image": "https://example.com/cpp.jpg",
         "qualification": 4.0,
-        "video": "https://example.com/cpp-video"
+        "video": "8jLOx1hD3_o"
       },
       {
         "title": "Curso de programación en JavaScript",
@@ -31,7 +31,7 @@
         "price": "44.99",
         "image": "https://example.com/javascript.jpg",
         "qualification": 4.7,
-        "video": "https://example.com/javascript-video"
+        "video": "z95mZVUcJ-E"
       },
       {
         "title": "Curso de programación en C#",
@@ -39,7 +39,7 @@
         "price": "49.99",
         "image": "https://example.com/csharp.jpg",
         "qualification": 4.3,
-        "video": "https://example.com/csharp-video"
+        "video": "L-f8u0hwi4Y"
       },
       {
         "title": "Curso de programación en Ruby",
@@ -47,7 +47,7 @@
         "price": "39.99",
         "image": "https://example.com/ruby.jpg",
         "qualification": 4.1,
-        "video": "https://example.com/ruby-video"
+        "video": "SjMIel2QZW4"
       },
       {
         "title": "Curso de programación en PHP",
@@ -55,7 +55,7 @@
         "price": "44.99",
         "image": "https://example.com/php.jpg",
         "qualification": 4.4,
-        "video": "https://example.com/php-video"
+        "video": "BcGAPkjt_IE"
       },
       {
         "title": "Curso de programación en Swift",
@@ -63,7 +63,7 @@
         "price": "59.99",
         "image": "https://example.com/swift.jpg",
         "qualification": 4.6,
-        "video": "https://example.com/swift-video"
+        "video": "kpsVJptSv1U"
       },
       {
         "title": "Curso de programación en Go",
@@ -71,7 +71,7 @@
         "price": "54.99",
         "image": "https://example.com/go.jpg",
         "qualification": 4.0,
-        "video": "https://example.com/go-video"
+        "video": "AGiayASyp2Q"
       },
       {
         "title": "Curso de programación en Kotlin",
@@ -79,7 +79,7 @@
         "price": "49.99",
         "image": "https://example.com/kotlin.jpg",
         "qualification": 4.5,
-        "video": "https://example.com/kotlin-video"
+        "video": "T3ugOYTRF7c"
       }
     ],
     "desarrollo-movil": [
@@ -89,7 +89,7 @@
         "price": "99.99",
         "image": "https://example.com/react-native-course.jpg",
         "qualification": 4.5,
-        "video": "https://example.com/react-native-course-video"
+        "video": "qi87b6VcIHY"
       },
       {
         "title": "Curso de Desarrollo Móvil con Flutter",
@@ -97,7 +97,7 @@
         "price": "149.99",
         "image": "https://example.com/flutter-course.jpg",
         "qualification": 4.8,
-        "video": "https://example.com/flutter-course-video"
+        "video": "-pWSQYpkkjk"
       },
       {
         "title": "Curso de Desarrollo Móvil con Ionic",
@@ -105,15 +105,15 @@
         "price": "79.99",
         "image": "https://example.com/ionic-course.jpg",
         "qualification": 4.2,
-        "video": "https://example.com/ionic-course-video"
+        "video": "akCCJrG9-Dk"
       },
       {
         "title": "Curso de Desarrollo Móvil con Xamarin",
         "description": "Descubre cómo crear aplicaciones móviles nativas para iOS y Android utilizando Xamarin, un framework de desarrollo móvil de Microsoft.",
-        "price": "129.99",
+        "price": "0.0",
         "image": "https://example.com/xamarin-course.jpg",
         "qualification": 4.0,
-        "video": "https://example.com/xamarin-course-video"
+        "video": "PdYYcanyvVo"
       },
       {
         "title": "Curso de Desarrollo Móvil con NativeScript",
@@ -121,7 +121,7 @@
         "price": "89.99",
         "image": "https://example.com/nativescript-course.jpg",
         "qualification": 4.3,
-        "video": "https://example.com/nativescript-course-video"
+        "video": "eTsKuIVRTvU"
       },
       {
         "title": "Curso de Desarrollo Móvil con PhoneGap",
@@ -129,7 +129,7 @@
         "price": "69.99",
         "image": "https://example.com/phonegap-course.jpg",
         "qualification": 3.9,
-        "video": "https://example.com/phonegap-course-video"
+        "video": "eExB-YggVWI"
       },
       {
         "title": "Curso de Desarrollo Móvil con Framework7",
@@ -137,7 +137,7 @@
         "price": "59.99",
         "image": "https://example.com/framework7-course.jpg",
         "qualification": 4.1,
-        "video": "https://example.com/framework7-course-video"
+        "video": "2En85A9y1ZI"
       },
       {
         "title": "Curso de Desarrollo Móvil con jQuery Mobile",
@@ -145,7 +145,7 @@
         "price": "49.99",
         "image": "https://example.com/jquery-mobile-course.jpg",
         "qualification": 3.7,
-        "video": "https://example.com/jquery-mobile-course-video"
+        "video": "ZcoKj22UkCo"
       },
       {
         "title": "Curso de Desarrollo Móvil con Onsen UI",
@@ -153,15 +153,7 @@
         "price": "79.99",
         "image": "https://example.com/onsen-ui-course.jpg",
         "qualification": 4.0,
-        "video": "https://example.com/onsen-ui-course-video"
-      },
-      {
-        "title": "Curso de Desarrollo Móvil con Sencha Touch",
-        "description": "Descubre cómo crear aplicaciones móviles web utilizando Sencha Touch, un framework de desarrollo móvil de código abierto basado en HTML, CSS y JavaScript.",
-        "price": "69.99",
-        "image": "https://example.com/sencha-touch-course.jpg",
-        "qualification": 3.8,
-        "video": "https://example.com/sencha-touch-course-video"
+        "video": "U_83GjDpGMU"
       }
     ],
     "testing": [
@@ -171,7 +163,7 @@
         "price": "199.99",
         "image": "https://example.com/curso-testing-software.jpg",
         "qualification": 4.5,
-        "video": "https://example.com/curso-testing-software-video"
+        "video": "LJsLb0ZaVSg"
       },
       {
         "title": "Curso de Automatización de Pruebas",
@@ -179,7 +171,7 @@
         "price": "249.99",
         "image": "https://example.com/curso-automatizacion-pruebas.jpg",
         "qualification": 4.2,
-        "video": "https://example.com/curso-automatizacion-pruebas-video"
+        "video": "KskSQI5ZPVM"
       },
       {
         "title": "Curso de Pruebas de Rendimiento",
@@ -187,7 +179,7 @@
         "price": "179.99",
         "image": "https://example.com/curso-pruebas-rendimiento.jpg",
         "qualification": 4.3,
-        "video": "https://example.com/curso-pruebas-rendimiento-video"
+        "video": "AkDr2USeJZ8"
       },
       {
         "title": "Curso de Pruebas de Seguridad",
@@ -195,7 +187,7 @@
         "price": "299.99",
         "image": "https://example.com/curso-pruebas-seguridad.jpg",
         "qualification": 4.7,
-        "video": "https://example.com/curso-pruebas-seguridad-video"
+        "video": "rBdk2yhse48"
       },
       {
         "title": "Curso de Pruebas Funcionales",
@@ -203,7 +195,7 @@
         "price": "199.99",
         "image": "https://example.com/curso-pruebas-funcionales.jpg",
         "qualification": 4.4,
-        "video": "https://example.com/curso-pruebas-funcionales-video"
+        "video": "yryYDeMe60c"
       },
       {
         "title": "Curso de Pruebas Exploratorias",
@@ -211,7 +203,7 @@
         "price": "149.99",
         "image": "https://example.com/curso-pruebas-exploratorias.jpg",
         "qualification": 4.1,
-        "video": "https://example.com/curso-pruebas-exploratorias-video"
+        "video": "Vrl82sdd4RY"
       },
       {
         "title": "Curso de Pruebas de Usabilidad",
@@ -219,7 +211,7 @@
         "price": "179.99",
         "image": "https://example.com/curso-pruebas-usabilidad.jpg",
         "qualification": 4.0,
-        "video": "https://example.com/curso-pruebas-usabilidad-video"
+        "video": "4OvTDueifA0"
       },
       {
         "title": "Curso de Pruebas de Regresión",
@@ -227,15 +219,15 @@
         "price": "149.99",
         "image": "https://example.com/curso-pruebas-regresion.jpg",
         "qualification": 4.6,
-        "video": "https://example.com/curso-pruebas-regresion-video"
+        "video": "kc2YD6Gh1JU"
       },
       {
-        "title": "Curso de Pruebas de Integración",
+        "title": "Curso de Pruebas de Integración con Spring Boot",
         "description": "Aprende a realizar pruebas de integración para asegurar el correcto funcionamiento de tus componentes de software.",
         "price": "199.99",
         "image": "https://example.com/curso-pruebas-integracion.jpg",
         "qualification": 4.2,
-        "video": "https://example.com/curso-pruebas-integracion-video"
+        "video": "2MsnXOWDTj0"
       },
       {
         "title": "Curso de Pruebas de Aceptación",
@@ -243,17 +235,17 @@
         "price": "179.99",
         "image": "https://example.com/curso-pruebas-aceptacion.jpg",
         "qualification": 4.3,
-        "video": "https://example.com/curso-pruebas-aceptacion-video"
+        "video": "07vXryxPcMA"
       }
     ],
-    "diseno": [
+    "diseño": [
       {
         "title": "Diseño de Interfaces de Software",
         "description": "Aprende a diseñar interfaces de software efectivas y atractivas.",
         "price": "99.99",
         "image": "https://example.com/images/design.jpg",
         "qualification": 4.5,
-        "video": "https://example.com/videos/design.mp4"
+        "video": "9z1IhqGQ--c"
       },
       {
         "title": "Principios de Diseño de Interfaces",
@@ -261,7 +253,7 @@
         "price": "79.99",
         "image": "https://example.com/images/principles.jpg",
         "qualification": 4.2,
-        "video": "https://example.com/videos/principles.mp4"
+        "video": "ABggYX2jOsM"
       },
       {
         "title": "Usabilidad y Experiencia de Usuario",
@@ -269,7 +261,7 @@
         "price": "89.99",
         "image": "https://example.com/images/usability.jpg",
         "qualification": 4.7,
-        "video": "https://example.com/videos/usability.mp4"
+        "video": "_wAsIfWjwVs"
       },
       {
         "title": "Diseño Responsivo",
@@ -277,7 +269,7 @@
         "price": "69.99",
         "image": "https://example.com/images/responsive.jpg",
         "qualification": 4.0,
-        "video": "https://example.com/videos/responsive.mp4"
+        "video": "_ESkNVyXjdY"
       },
       {
         "title": "Accesibilidad en el Diseño de Interfaces",
@@ -285,7 +277,7 @@
         "price": "59.99",
         "image": "https://example.com/images/accessibility.jpg",
         "qualification": 4.3,
-        "video": "https://example.com/videos/accessibility.mp4"
+        "video": "lwy4BHVejME"
       },
       {
         "title": "Psicología del Usuario",
@@ -293,7 +285,7 @@
         "price": "79.99",
         "image": "https://example.com/images/psychology.jpg",
         "qualification": 4.1,
-        "video": "https://example.com/videos/psychology.mp4"
+        "video": "9TB42sUCwYU"
       },
       {
         "title": "Diseño de Interfaces para Dispositivos Móviles",
@@ -301,7 +293,7 @@
         "price": "89.99",
         "image": "https://example.com/images/mobile.jpg",
         "qualification": 4.6,
-        "video": "https://example.com/videos/mobile.mp4"
+        "video": "pYQeOla4h8A"
       },
       {
         "title": "Diseño Centrado en el Usuario",
@@ -309,7 +301,7 @@
         "price": "99.99",
         "image": "https://example.com/images/user-centered.jpg",
         "qualification": 4.8,
-        "video": "https://example.com/videos/user-centered.mp4"
+        "video": "RlsErkJmub8"
       },
       {
         "title": "Arquitectura de la Información",
@@ -317,7 +309,7 @@
         "price": "69.99",
         "image": "https://example.com/images/information-architecture.jpg",
         "qualification": 4.4,
-        "video": "https://example.com/videos/information-architecture.mp4"
+        "video": "t3wb7lzP1fE"
       },
       {
         "title": "Diseño de Interacción",
@@ -325,7 +317,7 @@
         "price": "79.99",
         "image": "https://example.com/images/interaction-design.jpg",
         "qualification": 4.9,
-        "video": "https://example.com/videos/interaction-design.mp4"
+        "video": "3Crq3mLOF-k"
       }
     ],
     "desarrollo-web": [
@@ -335,7 +327,7 @@
         "price": "99.99",
         "image": "https://example.com/angular-course.jpg",
         "qualification": 4.5,
-        "video": "https://example.com/angular-course-video"
+        "video": "soInCF7nbDw"
       },
       {
         "title": "Curso de Desarrollo Web con React",
@@ -343,7 +335,7 @@
         "price": "89.99",
         "image": "https://example.com/react-course.jpg",
         "qualification": 4.2,
-        "video": "https://example.com/react-course-video"
+        "video": "6Jfk8ic3KVk"
       },
       {
         "title": "Curso de Desarrollo Web con Vue",
@@ -351,7 +343,7 @@
         "price": "79.99",
         "image": "https://example.com/vue-course.jpg",
         "qualification": 4.7,
-        "video": "https://example.com/vue-course-video"
+        "video": "Y4hfWBJ-UzY"
       },
       {
         "title": "Curso de Desarrollo Web con Laravel",
@@ -359,7 +351,7 @@
         "price": "69.99",
         "image": "https://example.com/laravel-course.jpg",
         "qualification": 4.3,
-        "video": "https://example.com/laravel-course-video"
+        "video": "4923Uyu54"
       },
       {
         "title": "Curso de Desarrollo Web con Symfony",
@@ -367,7 +359,7 @@
         "price": "79.99",
         "image": "https://example.com/symfony-course.jpg",
         "qualification": 4.1,
-        "video": "https://example.com/symfony-course-video"
+        "video": "O_rQ01N49Vs"
       },
       {
         "title": "Curso de Desarrollo Web con Django",
@@ -375,7 +367,7 @@
         "price": "89.99",
         "image": "https://example.com/django-course.jpg",
         "qualification": 4.6,
-        "video": "https://example.com/django-course-video"
+        "video": "T1intZyhXDU"
       },
       {
         "title": "Curso de Desarrollo Web con Flask",
@@ -383,7 +375,7 @@
         "price": "59.99",
         "image": "https://example.com/flask-course.jpg",
         "qualification": 4.4,
-        "video": "https://example.com/flask-course-video"
+        "video": "W-SfC_V7P6o"
       },
       {
         "title": "Curso de Desarrollo Web con Ruby on Rails",
@@ -391,7 +383,7 @@
         "price": "69.99",
         "image": "https://example.com/rails-course.jpg",
         "qualification": 4.0,
-        "video": "https://example.com/rails-course-video"
+        "video": "wv-zebDXSbw"
       },
       {
         "title": "Curso de Desarrollo Web con Express.js",
@@ -399,15 +391,7 @@
         "price": "59.99",
         "image": "https://example.com/express-course.jpg",
         "qualification": 4.3,
-        "video": "https://example.com/express-course-video"
-      },
-      {
-        "title": "Curso de Desarrollo Web con Flask",
-        "description": "Aprende a construir aplicaciones web con Flask, el microframework de Python. Con este curso, podrás desarrollar proyectos web de forma rápida y sencilla utilizando Flask.",
-        "price": "59.99",
-        "image": "https://example.com/flask-course.jpg",
-        "qualification": 4.4,
-        "video": "https://example.com/flask-course-video"
+        "video": "JmJ1WUoUIK4"
       }
     ]
   }

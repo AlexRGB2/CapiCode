@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../../core/services/auth.service';
 import Swal from 'sweetalert2';
@@ -16,6 +16,11 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent implements OnInit {
+  private formBuilder = inject(FormBuilder);
+  private authService = inject(AuthService);
+  private title = inject(Title);
+  private router = inject(Router);
+
   siteKey: string = environment.siteKeyReCaptcha;
   loginForm = this.formBuilder.group({
     correo: ['', [Validators.required, Validators.email]],
@@ -39,13 +44,6 @@ export class LoginComponent implements OnInit {
     recaptcha: [{ type: 'required', message: 'El reCaptcha es requerido.' }],
   };
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private authService: AuthService,
-    private title: Title,
-    private router: Router
-  ) { }
-
   ngOnInit(): void {
     this.title.setTitle('CapiCode | Inicia sesión');
   }
@@ -64,7 +62,7 @@ export class LoginComponent implements OnInit {
     this.authService.signIn(loginForm).subscribe((res: any) => {
       if (res.estado == 'Exitó') {
         this.router.navigateByUrl('/').finally(() => {
-          sessionStorage.setItem('userName', res.objeto.nombre!);
+          localStorage.setItem('userName', res.objeto.nombre!);
           window.location.reload();
         });
       } else {
