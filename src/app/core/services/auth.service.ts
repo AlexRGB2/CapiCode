@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { map } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { LoginForm } from '../../models/LoginForm.model';
@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient) { }
+  private http = inject(HttpClient);
 
   signIn(loginForm: LoginForm) {
     return this.http

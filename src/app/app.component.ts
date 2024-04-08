@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { isPlatformBrowser } from '@angular/common';
+import { TitleCasePipe, isPlatformBrowser } from '@angular/common';
 
 // Librerias
 import { initFlowbite } from 'flowbite';
@@ -14,6 +14,7 @@ import { ScrollToTopButtonComponent } from './components/scroll-to-top-button/sc
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { SplitwordsPipe } from './core/pipes/splitwords.pipe';
 
 @Component({
   selector: 'app-root',
@@ -31,6 +32,8 @@ import { ErrorComponent } from './pages/error/error.component';
     LoginComponent,
     RegisterComponent,
     NgxSpinnerModule,
+    TitleCasePipe,
+    SplitwordsPipe,
   ],
 })
 export class AppComponent implements OnInit {

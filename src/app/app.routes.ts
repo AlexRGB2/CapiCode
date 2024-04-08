@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './core/guards/auth.guard';
 
 export const routes: Routes = [
   {
@@ -44,6 +45,7 @@ export const routes: Routes = [
   },
   {
     path: 'category/:categoria/:curso',
+    canActivate: [authGuard],
     loadComponent: () =>
       import('./pages/info-course/info-course.component').then(
         (c) => c.InfoCourseComponent

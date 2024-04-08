@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { AfterViewInit, Component, OnInit, inject } from '@angular/core';
 import { Course } from '../../models/InfoCategoria.model';
 import { CategoriaService } from '../../core/services/categoria.service';
 import {
@@ -9,6 +9,7 @@ import {
   RouterModule,
 } from '@angular/router';
 import { filter } from 'rxjs';
+import { BreadcrumbService } from 'xng-breadcrumb';
 
 @Component({
   selector: 'app-curso-category',
@@ -17,10 +18,11 @@ import { filter } from 'rxjs';
   templateUrl: './curso-category.component.html',
   styleUrl: './curso-category.component.scss',
 })
-export class CursoCategoryComponent implements OnInit {
+export class CursoCategoryComponent implements OnInit, AfterViewInit {
   private categoriaService = inject(CategoriaService);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
+  private breadcrumbService = inject(BreadcrumbService);
 
   categoria: string = '';
   cursos: Course[] = [];
@@ -36,7 +38,22 @@ export class CursoCategoryComponent implements OnInit {
       )
       .subscribe((event: NavigationEnd) => {
         this.getCursos();
+        setTimeout(() => {
+          this.breadcrumbService.set('category/:categoria', {
+            label: this.categoria,
+            info: { url: 'category/' + this.categoria },
+          });
+        }, 1000);
       });
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.breadcrumbService.set('category/:categoria', {
+        label: this.categoria,
+        info: { url: 'category/' + this.categoria },
+      });
+    }, 100);
   }
 
   getCursos() {
@@ -59,6 +76,7 @@ export class CursoCategoryComponent implements OnInit {
     const navigationExtras: NavigationExtras = {
       state: {
         curso: curso,
+        categoria: this.categoria,
       },
     };
 
