@@ -1,10 +1,11 @@
-import { isPlatformBrowser } from '@angular/common';
-import { PLATFORM_ID } from '@angular/core';
-import { CanActivateFn } from '@angular/router';
+import { inject } from '@angular/core';
+import { CanActivateFn, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 export const authGuard: CanActivateFn = (route, state) => {
+  const router = inject(Router);
   const user = localStorage.getItem('userName');
+
   if (user !== null && user !== undefined) {
     return true;
   } else {
@@ -14,6 +15,7 @@ export const authGuard: CanActivateFn = (route, state) => {
       icon: 'info',
       confirmButtonText: 'Cerrar',
     });
+    router.navigate(['login']);
     return false;
   }
 };

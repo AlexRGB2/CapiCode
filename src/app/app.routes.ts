@@ -92,6 +92,19 @@ export const routes: Routes = [
     },
   },
   {
+    path: 'sitemap',
+    loadComponent: () =>
+      import('./pages/site-map/site-map.component').then(
+        (c) => c.SiteMapComponent
+      ),
+    data: {
+      breadcrumb: {
+        label: 'Mapa del Sitio',
+        info: { url: 'sitemap' },
+      },
+    },
+  },
+  {
     path: '**',
     loadComponent: () =>
       import('./pages/error/error.component').then((c) => c.ErrorComponent),
