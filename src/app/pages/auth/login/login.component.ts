@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID, importProvidersFrom, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../../core/services/auth.service';
 import Swal from 'sweetalert2';
@@ -63,6 +63,7 @@ export class LoginComponent implements OnInit {
       if (res.estado == 'Exitó') {
         this.router.navigateByUrl('/').finally(() => {
           localStorage.setItem('userName', res.objeto.nombre!);
+          this.authService.setIntervalSession();
           window.location.reload();
         });
       } else {
