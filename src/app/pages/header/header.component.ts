@@ -15,11 +15,12 @@ export class HeaderComponent implements OnInit {
   private router = inject(Router);
   userName: string = '';
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.userName = localStorage.getItem('userName')!;
+      this.authService.setIntervalSession();
     }
   }
 
@@ -30,9 +31,12 @@ export class HeaderComponent implements OnInit {
   logOut() {
     this.authService.logOut().then((resp) => {
       if (resp.isConfirmed) {
-        localStorage.removeItem('userName');
-        this.userName = '';
-        this.router.navigateByUrl('/');
+        this.authService.logOutEstatusSesion(this.userName).subscribe((res) => {
+          localStorage.removeItem('userName');
+          this.userName = '';
+          this.router.navigateByUrl('/');
+          this.authService.clearIntervalSesion();
+        });
       }
     });
   }
