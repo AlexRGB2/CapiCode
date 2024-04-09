@@ -15,6 +15,10 @@ export class ScrollToTopButtonComponent {
     this.showScrollButton = window.scrollY > 100;
   }
 
+  /**
+   * @author AlexRGB2
+   * @description Método envia a el usuario al principio de la página.
+   */
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

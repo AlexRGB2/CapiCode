@@ -9,6 +9,10 @@ import { Course } from '../../models/InfoCategoria.model';
 export class CategoriaService {
   private http = inject(HttpClient);
 
+  /**
+   * @author AlexRGB2
+   * @description Método obtiene las categorias de los assets.
+   */
   getCategories(category: string): Observable<any> {
     return this.http
       .get<any>('assets/json/cursos.json')

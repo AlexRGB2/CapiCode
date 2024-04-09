@@ -23,6 +23,10 @@ export class PoliticaPrivacidadComponent implements OnInit {
     this.title.setTitle('CapiCode | Política de privacidad');
   }
 
+  /**
+   * @author AlexRGB2
+   * @description Método envia a el usuario a la sección deseada.
+   */
   scrollToSection(sectionId: string) {
     const element = this.el.nativeElement.querySelector(`#${sectionId}`);
     if (element) {

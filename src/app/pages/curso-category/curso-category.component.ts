@@ -56,6 +56,10 @@ export class CursoCategoryComponent implements OnInit, AfterViewInit {
     }, 100);
   }
 
+  /**
+   * @author AlexRGB2
+   * @description Metodo que obtiene todos los cursos de una categoria.
+   */
   getCursos() {
     this.route.params.subscribe((param) => {
       const parametro = param['categoria'];
@@ -68,8 +72,8 @@ export class CursoCategoryComponent implements OnInit, AfterViewInit {
   }
 
   /**
-   * Metodo que redirecciona a la
-   * información de un curso.
+   * @author AlexRGB2
+   * @description Metodo que redirecciona a un curso.
    * @param curso - Datos a gestionar
    */
   setCourse(curso: Course) {

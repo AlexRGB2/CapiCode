@@ -108,10 +108,18 @@ export class HomeComponent implements AfterViewInit, OnInit {
     this.carousel.cycle();
   }
 
+  /**
+   * @author AlexRGB2
+   * @description Método regresa las imagenes del carusel.
+   */
   onPrevClick() {
     this.carousel.prev();
   }
 
+  /**
+   * @author AlexRGB2
+   * @description Método avanza las imagenes del carusel.
+   */
   onNextClick() {
     this.carousel.next();
   }

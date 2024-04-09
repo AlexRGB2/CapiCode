@@ -76,6 +76,29 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  /**
+   * @author AlexRGB2
+   * @description Método que envia un correo al usuario para reestablecer su contraseña.
+   * @returns void.
+   */
+  async recovePassword() {
+    const { value: email } = await Swal.fire({
+      title: 'Reestablecer tu contraseña',
+      text: 'Para reestablecer tu contraseña solicitamos el correo electronico de tu cuenta.',
+      input: 'email',
+      inputValue: '',
+      showCancelButton: true,
+      cancelButtonText: 'Cancelar',
+    });
+
+    if (email) {
+      // TODO: Realizar función para enviar un código a el correo.
+      // TODO: Validar el código de un solo uso.
+      // TODO: En una nueva, ventana solicitar la nueva contraseña.
+      // TODO: Actualizar en base de datos la contraseña del usuario.
+    }
+  }
+
   get correo() {
     return this.loginForm.get('correo');
   }

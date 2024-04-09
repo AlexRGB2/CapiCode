@@ -23,10 +23,18 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  /**
+   * @author AlexRGB2
+   * @description Método que envia a el usuario a el principio de la página.
+   */
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  /**
+   * @author AlexRGB2
+   * @description Método que cierra la sesión del usuario.
+   */
   logOut() {
     this.authService.logOut().then((resp) => {
       if (resp.isConfirmed) {
