@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './core/guards/auth.guard';
+import { resetPasswordGuard } from './core/guards/reset-password.guard';
 
 export const routes: Routes = [
   {
@@ -63,6 +64,20 @@ export const routes: Routes = [
       import('./pages/planes/planes.component').then((c) => c.PlanesComponent),
     data: {
       breadcrumb: { label: 'Planes', info: { url: 'plans' } },
+    },
+  },
+  {
+    path: 'reset-password',
+    canActivate: [resetPasswordGuard],
+    loadComponent: () =>
+      import('./pages/user/recover-password/recover-password.component').then(
+        (c) => c.RecoverPasswordComponent
+      ),
+    data: {
+      breadcrumb: {
+        label: 'Reestablecer Contraseña',
+        info: { url: 'reset-password' },
+      },
     },
   },
   {

@@ -22,6 +22,7 @@ import { RegisterForm } from '../../../models/RegisterForm.model';
   styleUrl: './register.component.scss',
 })
 export class RegisterComponent implements OnInit {
+  showPassword: boolean = false;
   siteKey: string = environment.siteKeyReCaptcha;
   registerForm = this.formBuilder.group(
     {
@@ -150,6 +151,19 @@ export class RegisterComponent implements OnInit {
         });
       }
     });
+  }
+
+  togglePasswordVisibility(inputId: string[]) {
+    inputId.forEach((item) => {
+      const input = document.getElementById(item) as HTMLInputElement;
+      if (input.type === 'password') {
+        input.type = 'text';
+      } else {
+        input.type = 'password';
+      }
+    });
+
+    this.showPassword = !this.showPassword;
   }
 
   get nombre() {
