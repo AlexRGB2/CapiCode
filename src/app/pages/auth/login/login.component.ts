@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../../core/services/auth.service';
 import Swal from 'sweetalert2';
@@ -6,7 +6,9 @@ import { Title } from '@angular/platform-browser';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { environment } from '../../../../environments/environment';
 import { LoginForm } from '../../../models/LoginForm.model';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
+import { ResetPasswordService } from '../../../core/services/reset-password.service';
+import { CapiResponse } from '../../../models/Response.model';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +22,9 @@ export class LoginComponent implements OnInit {
   private authService = inject(AuthService);
   private title = inject(Title);
   private router = inject(Router);
+  private resetPassService = inject(ResetPasswordService);
 
+  showPassword: boolean = false;
   siteKey: string = environment.siteKeyReCaptcha;
   loginForm = this.formBuilder.group({
     correo: ['', [Validators.required, Validators.email]],
@@ -89,14 +93,97 @@ export class LoginComponent implements OnInit {
       inputValue: '',
       showCancelButton: true,
       cancelButtonText: 'Cancelar',
+      backdrop: false,
     });
 
     if (email) {
-      // TODO: Realizar función para enviar un código a el correo.
-      // TODO: Validar el código de un solo uso.
-      // TODO: En una nueva, ventana solicitar la nueva contraseña.
-      // TODO: Actualizar en base de datos la contraseña del usuario.
+      this.resetPassService.sendMail(email).subscribe(
+        async (resp: CapiResponse) => {
+          if (resp.estado.toLowerCase() === 'exito') {
+            const { value: code } = await Swal.fire({
+              text: 'Introduce el código enviado a tu correo.',
+              input: 'text',
+              inputValue: '',
+              inputAttributes: {
+                maxLength: '6',
+              },
+              showCancelButton: true,
+              cancelButtonText: 'Cancelar',
+              backdrop: false,
+            });
+
+            this.resetPassService.validCode(code).subscribe(
+              (resp: CapiResponse) => {
+                if (resp.estado.toLowerCase() === 'exito') {
+                  Swal.fire({
+                    title: 'Código Valido',
+                    text: resp.mensaje,
+                    icon: 'success',
+                    backdrop: false,
+                    timer: 3000,
+                  }).then(() => {
+                    const navigationExtras: NavigationExtras = {
+                      state: {
+                        correo: email,
+                      },
+                    };
+                    this.resetPassService.isEnabled = true;
+                    this.router.navigate(['reset-password'], navigationExtras);
+                  });
+                } else {
+                  Swal.fire({
+                    title: resp.estado,
+                    text: resp.mensaje,
+                    icon: 'error',
+                    timer: 3000,
+                    backdrop: false,
+                  });
+                }
+              },
+              (err) => {
+                Swal.fire({
+                  title: err.error.estado,
+                  text: err.error.mensaje,
+                  icon: 'error',
+                  timer: 3000,
+                  backdrop: false,
+                });
+              }
+            );
+          } else {
+            Swal.fire({
+              title: resp.estado,
+              text: resp.mensaje,
+              icon: 'error',
+              timer: 3000,
+              backdrop: false,
+            });
+          }
+        },
+        (err) => {
+          Swal.fire({
+            title: err.error.estado,
+            text: err.error.mensaje,
+            icon: 'error',
+            timer: 3000,
+            backdrop: false,
+          });
+        }
+      );
     }
+  }
+
+  togglePasswordVisibility(inputId: string[]) {
+    inputId.forEach((item) => {
+      const input = document.getElementById(item) as HTMLInputElement;
+      if (input.type === 'password') {
+        input.type = 'text';
+      } else {
+        input.type = 'password';
+      }
+    });
+
+    this.showPassword = !this.showPassword;
   }
 
   get correo() {
