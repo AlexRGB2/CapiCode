@@ -6,7 +6,9 @@ import { finalize } from 'rxjs';
 export const loaderInterceptor: HttpInterceptorFn = (req, next) => {
   const spinnerService = inject(NgxSpinnerService);
 
-  spinnerService.show();
+  if (!req.url.endsWith("/api/auth/getEstatusSesion")) {
+    spinnerService.show();
+  }
 
   return next(req).pipe(
     finalize(() => {
