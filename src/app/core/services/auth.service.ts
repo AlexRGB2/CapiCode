@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, catchError, map, throwError } from 'rxjs';
 import { environment } from '../../../environments/environment';
@@ -22,6 +22,7 @@ export class AuthService {
   minutoMilisegundos: any = 10000;
   nickname!: string | null;
   userName: string = '';
+  token: any;
 
   signIn(loginForm: LoginForm) {
     return this.http
@@ -60,6 +61,7 @@ export class AuthService {
     // Comprueba la sesion cada minuto
     this.intervalId = setInterval(() => {
       this.verificarSesion();
+      console.log("doiasjdojaso");
     }, this.tiempoRevisarSesion);
   };
 
@@ -69,17 +71,20 @@ export class AuthService {
 
   verificarSesion() {
     this.nickname = localStorage.getItem('userName');
+    this.token = localStorage.getItem('token');
 
     if (this.nickname != null) {
       this.getEstatusSesion(this.nickname).subscribe(
         (res) => {
           if (!res.objeto) {
             localStorage.removeItem('userName');
+            localStorage.removeItem('token');
             this.userName = '';
+            this.token = '';
             this.clearIntervalSesion();
             this.router.navigateByUrl('/');
             this.modalCierreSesion(
-              'Sesión cerrada por inicio en otro dispositivo'
+              res.mensaje
             );
           }
         },
@@ -100,6 +105,11 @@ export class AuthService {
   }
 
   getEstatusSesion(userName: string): Observable<any | void> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'x-access-token': this.token
+    });
+
     let json = {
       userName: userName
     }
@@ -107,7 +117,8 @@ export class AuthService {
     return this.http
       .post(
         `${environment.API_URL}/api/auth/getEstatusSesion`,
-        json
+        json,
+        { headers: headers }
       )
       .pipe(
         (res) => {

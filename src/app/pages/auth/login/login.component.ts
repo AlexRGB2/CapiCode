@@ -67,6 +67,7 @@ export class LoginComponent implements OnInit {
       if (res.estado == 'Exitó') {
         this.router.navigateByUrl('/').finally(() => {
           localStorage.setItem('userName', res.objeto.nombre!);
+          localStorage.setItem('token', res.token);
           this.authService.setIntervalSession();
           window.location.reload();
         });
