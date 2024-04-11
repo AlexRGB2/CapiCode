@@ -3,4 +3,5 @@ export interface CapiResponse {
   mensaje: string;
   objeto: Object;
   token: string;
+  twofa: boolean;
 }

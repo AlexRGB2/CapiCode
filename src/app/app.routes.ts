@@ -120,6 +120,20 @@ export const routes: Routes = [
     },
   },
   {
+    path: 'user-profile',
+    canActivate: [authGuard],
+    loadComponent: () =>
+      import('./pages/user/profile/profile.component').then(
+        (c) => c.ProfileComponent
+      ),
+    data: {
+      breadcrumb: {
+        label: 'Perfil de usuario',
+        info: { url: 'user-profile' },
+      },
+    },
+  },
+  {
     path: '**',
     loadComponent: () =>
       import('./pages/error/error.component').then((c) => c.ErrorComponent),
