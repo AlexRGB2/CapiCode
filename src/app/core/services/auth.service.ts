@@ -7,6 +7,7 @@ import { RegisterForm } from '../../models/RegisterForm.model';
 import { LoginResponse } from '../../models/LoginResponse.model';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { CapiResponse } from '../../models/Response.model';
 
 @Injectable({
   providedIn: 'root',
@@ -159,5 +160,53 @@ export class AuthService {
     }
 
     return throwError(errorMessage);
+  }
+
+  sendMail2FA(email: string, password: string) {
+    const json = {
+      correo: email,
+      contrasena: password
+    };
+
+    return this.http.post<CapiResponse>(
+      `${environment.API_URL}/api/auth/2FA`,
+      json
+    );
+  }
+
+  validCode2FA(codeOtp: string) {
+    const json = {
+      codigo: codeOtp,
+    };
+
+    return this.http.post<CapiResponse>(
+      `${environment.API_URL}/api/auth/validCode2FA`,
+      json
+    );
+  }
+
+  updateUser(correo: string, userName: string, telefono: string, twofa: boolean) {
+    const json = {
+      correo: correo,
+      userName: userName,
+      telefono: telefono,
+      twofa: twofa
+    };
+
+    return this.http.post<CapiResponse>(
+      `${environment.API_URL}/api/user/updateUser`,
+      json
+    );
+  }
+
+  getUser(userName: string) {
+    const json = {
+      userName: userName,
+    };
+
+    return this.http.post<CapiResponse>(
+      `${environment.API_URL}/api/user/getUser`,
+      json
+    );
   }
 }

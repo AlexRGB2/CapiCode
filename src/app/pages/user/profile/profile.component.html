@@ -1,0 +1,48 @@
+<br>
+<br>
+<form [formGroup]="userForm" class="max-w-lg mx-auto bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
+    <div class="sm:flex sm:items-center px-6 py-4">
+        <button disabled
+            class="relative inline-flex items-center justify-center w-24 h-24 overflow-hidden bg-gray-300 rounded-full dark:bg-gray-600 dark:text-white sm:my-4">
+            {{ userName | slice : 0 : 2 | uppercase }}
+        </button>
+        <div class="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
+            <h1 class="text-xl font-semibold text-gray-800 dark:text-white">
+                {{ editing ? 'Editar perfil' : 'Perfil deUsuario' }}
+            </h1>
+            @if (!editing) {
+            <input type="text" formControlName="name"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 dark:bg-gray-700 dark:text-white">
+            <input type="email" formControlName="email"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 dark:bg-gray-700 dark:text-white">
+            <input type="tel" formControlName="phone"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 dark:bg-gray-700 dark:text-white">
+            } @else if (editing) {
+            <input type="text" formControlName="name"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 dark:bg-gray-700 dark:text-white">
+            <input type="email" formControlName="email"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 dark:bg-gray-700 dark:text-white">
+            <input type="tel" formControlName="phone"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 dark:bg-gray-700 dark:text-white">
+            }
+            <div class="mt-4">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" formControlName="twoFactorAuth">
+                    <span class="ml-2 text-sm text-gray-700 dark:text-gray-400">Habilitar Segundo Factor de
+                        Autenticación</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="px-6 py-4">
+        @if (!editing) {
+        <button (click)="toggleEdit()"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Editar</button>
+        } @else if (editing) {
+        <button (click)="cancelEdit()"
+            class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-10">Cancelar</button>
+        <button (click)="updateProfile()"
+            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Actualizar</button>
+        }
+    </div>
+</form>

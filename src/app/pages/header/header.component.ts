@@ -39,13 +39,17 @@ export class HeaderComponent implements OnInit {
   logOut() {
     this.authService.logOut().then((resp) => {
       if (resp.isConfirmed) {
+        this.authService.clearIntervalSesion();
         this.authService.logOutEstatusSesion(this.userName).subscribe((res) => {
           localStorage.removeItem('userName');
           this.userName = '';
           this.router.navigateByUrl('/');
-          this.authService.clearIntervalSesion();
         });
       }
     });
+  }
+
+  showProfile() {
+    this.router.navigateByUrl('/user-profile');
   }
 }
