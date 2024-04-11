@@ -21,9 +21,10 @@ export class ResetPasswordService {
     );
   }
 
-  validCode(codeOtp: string) {
+  validCode(codeOtp: string, secret: string) {
     const json = {
       codigo: codeOtp,
+      secret: secret,
     };
 
     return this.http.post<CapiResponse>(
