@@ -82,59 +82,61 @@ export class LoginComponent implements OnInit {
                 backdrop: false,
               });
 
-              this.authService.validCode2FA(code).subscribe(
-                (resp: CapiResponse) => {
-                  if (resp.estado.toLowerCase() === 'exito') {
+              this.authService
+                .validCode2FA(code, resp.objeto.toString())
+                .subscribe(
+                  (resp: CapiResponse) => {
+                    if (resp.estado.toLowerCase() === 'exito') {
+                      Swal.fire({
+                        title: 'Código Valido',
+                        text: resp.mensaje,
+                        icon: 'success',
+                        backdrop: false,
+                        timer: 3000,
+                      }).then(() => {
+                        this.authService
+                          .signIn(loginForm)
+                          .subscribe((res: any) => {
+                            if (res.estado == 'Exitó') {
+                              this.router.navigateByUrl('/').finally(() => {
+                                localStorage.setItem(
+                                  'userName',
+                                  res.objeto.nombre!
+                                );
+                                localStorage.setItem('token', res.token);
+                                this.authService.setIntervalSession();
+                                window.location.reload();
+                              });
+                            } else {
+                              Swal.fire({
+                                title: res.estado,
+                                text: res.mensaje,
+                                icon: 'error',
+                                confirmButtonText: 'Cerrar',
+                              });
+                            }
+                          });
+                      });
+                    } else {
+                      Swal.fire({
+                        title: resp.estado,
+                        text: resp.mensaje,
+                        icon: 'error',
+                        timer: 3000,
+                        backdrop: false,
+                      });
+                    }
+                  },
+                  (err) => {
                     Swal.fire({
-                      title: 'Código Valido',
-                      text: resp.mensaje,
-                      icon: 'success',
-                      backdrop: false,
-                      timer: 3000,
-                    }).then(() => {
-                      this.authService
-                        .signIn(loginForm)
-                        .subscribe((res: any) => {
-                          if (res.estado == 'Exitó') {
-                            this.router.navigateByUrl('/').finally(() => {
-                              localStorage.setItem(
-                                'userName',
-                                res.objeto.nombre!
-                              );
-                              localStorage.setItem('token', res.token);
-                              this.authService.setIntervalSession();
-                              window.location.reload();
-                            });
-                          } else {
-                            Swal.fire({
-                              title: res.estado,
-                              text: res.mensaje,
-                              icon: 'error',
-                              confirmButtonText: 'Cerrar',
-                            });
-                          }
-                        });
-                    });
-                  } else {
-                    Swal.fire({
-                      title: resp.estado,
-                      text: resp.mensaje,
+                      title: err.error.estado,
+                      text: err.error.mensaje,
                       icon: 'error',
                       timer: 3000,
                       backdrop: false,
                     });
                   }
-                },
-                (err) => {
-                  Swal.fire({
-                    title: err.error.estado,
-                    text: err.error.mensaje,
-                    icon: 'error',
-                    timer: 3000,
-                    backdrop: false,
-                  });
-                }
-              );
+                );
             } else {
               Swal.fire({
                 title: resp.estado,

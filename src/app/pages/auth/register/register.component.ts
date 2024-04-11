@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -6,7 +6,7 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
 import Swal from 'sweetalert2';
 import { Title } from '@angular/platform-browser';
@@ -22,8 +22,10 @@ import { RegisterForm } from '../../../models/RegisterForm.model';
   styleUrl: './register.component.scss',
 })
 export class RegisterComponent implements OnInit {
+  private router = inject(Router);
   showPassword: boolean = false;
   siteKey: string = environment.siteKeyReCaptcha;
+
   registerForm = this.formBuilder.group(
     {
       nombre: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+$/)]],
@@ -141,6 +143,10 @@ export class RegisterComponent implements OnInit {
           text: res.mensaje,
           icon: 'success',
           confirmButtonText: 'Cerrar',
+          backdrop: false,
+          timer: 3000,
+        }).then(() => {
+          this.router.navigate(['/login']);
         });
       } else {
         Swal.fire({

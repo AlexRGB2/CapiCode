@@ -56,15 +56,14 @@ export class AuthService {
   }
 
   setIntervalSession() {
-    this.tiempoRevisarSesion =
-      this.minutoMilisegundos * this.tiempoBaseDeDatos;
+    this.tiempoRevisarSesion = this.minutoMilisegundos * this.tiempoBaseDeDatos;
 
     // Comprueba la sesion cada minuto
     this.intervalId = setInterval(() => {
       this.verificarSesion();
-      console.log("doiasjdojaso");
+      console.log('doiasjdojaso');
     }, this.tiempoRevisarSesion);
-  };
+  }
 
   clearIntervalSesion() {
     clearInterval(this.intervalId);
@@ -84,12 +83,10 @@ export class AuthService {
             this.token = '';
             this.clearIntervalSesion();
             this.router.navigateByUrl('/');
-            this.modalCierreSesion(
-              res.mensaje
-            );
+            this.modalCierreSesion(res.mensaje);
           }
         },
-        (err) => { }
+        (err) => {}
       );
     }
   }
@@ -98,29 +95,26 @@ export class AuthService {
     Swal.fire({
       icon: 'warning',
       title: 'Sesión Cerrada',
-      text: text
+      text: text,
     }).then(() => {
-      window.location.reload()
-    }
-    );
+      window.location.reload();
+    });
   }
 
   getEstatusSesion(userName: string): Observable<any | void> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'x-access-token': this.token
+      'x-access-token': this.token,
     });
 
     let json = {
-      userName: userName
-    }
+      userName: userName,
+    };
 
     return this.http
-      .post(
-        `${environment.API_URL}/api/auth/getEstatusSesion`,
-        json,
-        { headers: headers }
-      )
+      .post(`${environment.API_URL}/api/auth/getEstatusSesion`, json, {
+        headers: headers,
+      })
       .pipe(
         (res) => {
           return res;
@@ -131,20 +125,15 @@ export class AuthService {
 
   logOutEstatusSesion(userName: string): Observable<any | void> {
     let json = {
-      userName: userName
-    }
+      userName: userName,
+    };
 
-    return this.http
-      .post(
-        `${environment.API_URL}/api/auth/logOut`,
-        json
-      )
-      .pipe(
-        (res) => {
-          return res;
-        },
-        catchError((err) => this.handlerError(err))
-      );
+    return this.http.post(`${environment.API_URL}/api/auth/logOut`, json).pipe(
+      (res) => {
+        return res;
+      },
+      catchError((err) => this.handlerError(err))
+    );
   }
 
   private handlerError(error: any): Observable<never> {
@@ -165,7 +154,7 @@ export class AuthService {
   sendMail2FA(email: string, password: string) {
     const json = {
       correo: email,
-      contrasena: password
+      contrasena: password,
     };
 
     return this.http.post<CapiResponse>(
@@ -174,9 +163,10 @@ export class AuthService {
     );
   }
 
-  validCode2FA(codeOtp: string) {
+  validCode2FA(codeOtp: string, secret: string) {
     const json = {
       codigo: codeOtp,
+      secret: secret,
     };
 
     return this.http.post<CapiResponse>(
@@ -185,12 +175,17 @@ export class AuthService {
     );
   }
 
-  updateUser(correo: string, userName: string, telefono: string, twofa: boolean) {
+  updateUser(
+    correo: string,
+    userName: string,
+    telefono: string,
+    twofa: boolean
+  ) {
     const json = {
       correo: correo,
       userName: userName,
       telefono: telefono,
-      twofa: twofa
+      twofa: twofa,
     };
 
     return this.http.post<CapiResponse>(
