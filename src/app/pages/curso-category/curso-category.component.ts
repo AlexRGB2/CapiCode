@@ -10,6 +10,7 @@ import {
 } from '@angular/router';
 import { filter } from 'rxjs';
 import { BreadcrumbService } from 'xng-breadcrumb';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-curso-category',
@@ -19,6 +20,7 @@ import { BreadcrumbService } from 'xng-breadcrumb';
   styleUrl: './curso-category.component.scss',
 })
 export class CursoCategoryComponent implements OnInit, AfterViewInit {
+  private title = inject(Title);
   private categoriaService = inject(CategoriaService);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
@@ -43,6 +45,11 @@ export class CursoCategoryComponent implements OnInit, AfterViewInit {
             label: this.categoria,
             info: { url: 'category/' + this.categoria },
           });
+          this.title.setTitle(
+            'CapiCode | ' +
+              this.categoria.charAt(0).toUpperCase() +
+              this.categoria.slice(1).split('-').join(' ')
+          );
         }, 1000);
       });
   }
@@ -53,6 +60,7 @@ export class CursoCategoryComponent implements OnInit, AfterViewInit {
         label: this.categoria,
         info: { url: 'category/' + this.categoria },
       });
+      this.title.setTitle('CapiCode | ' + this.categoria);
     }, 100);
   }
 
