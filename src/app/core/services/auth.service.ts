@@ -75,18 +75,68 @@ export class AuthService {
 
     if (this.nickname != null) {
       this.getEstatusSesion(this.nickname).subscribe(
-        (res) => {
+        async (res) => {
+          console.log(res);
           if (!res.objeto) {
-            localStorage.removeItem('userName');
-            localStorage.removeItem('token');
-            this.userName = '';
-            this.token = '';
             this.clearIntervalSesion();
-            this.router.navigateByUrl('/');
-            this.modalCierreSesion(res.mensaje);
+
+            if (res.expiro) {
+              Swal.fire({
+                title: 'Tu sesión ha expirado',
+                text: 'Para extenderla haz clic en el botón.',
+                confirmButtonText: 'Extender Sesión',
+                showCancelButton: true,
+                cancelButtonText: 'Cancelar',
+                allowOutsideClick: false,
+                timer: 10000,
+              }).then((res) => {
+                if (this.nickname != null) {
+                  this.extenderSesion(this.nickname, res.isConfirmed).subscribe(
+                    async (res) => {
+                      if (res.token != null) {
+                        localStorage.setItem('token', res.token)
+                        Swal.fire({
+                          title: res.estado,
+                          text: res.mensaje,
+                          icon: 'success',
+                          timer: 3000,
+                          backdrop: false,
+                        }).then(() => {
+                          this.setIntervalSession();
+                        });
+                      } else {
+                        localStorage.removeItem('userName');
+                        localStorage.removeItem('token');
+                        this.userName = '';
+                        this.token = '';
+                        this.router.navigateByUrl('/');
+                        Swal.fire({
+                          title: res.estado,
+                          text: res.mensaje,
+                          icon: 'error',
+                          timer: 3000,
+                          backdrop: false,
+                        }).then(() => {
+                          window.location.reload()
+                        });
+                      }
+                    },
+                    (err) => { }
+                  );
+                }
+              });
+
+            } else {
+              localStorage.removeItem('userName');
+              localStorage.removeItem('token');
+              this.userName = '';
+              this.token = '';
+              this.router.navigateByUrl('/');
+              this.modalCierreSesion(res.mensaje);
+            }
           }
         },
-        (err) => {}
+        (err) => { }
       );
     }
   }
@@ -203,5 +253,28 @@ export class AuthService {
       `${environment.API_URL}/api/user/getUser`,
       json
     );
+  }
+
+  extenderSesion(userName: string, extender: boolean): Observable<any | void> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'x-access-token': this.token,
+    });
+
+    let json = {
+      userName: userName,
+      extender: extender
+    };
+
+    return this.http
+      .post(`${environment.API_URL}/api/auth/extenderSesion`, json, {
+        headers: headers,
+      })
+      .pipe(
+        (res) => {
+          return res;
+        },
+        catchError((err) => this.handlerError(err))
+      );
   }
 }

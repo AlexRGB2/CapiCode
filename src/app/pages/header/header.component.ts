@@ -20,7 +20,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.userName = localStorage.getItem('userName')!;
-      this.authService.setIntervalSession();
+      if (this.userName != null) {
+        this.authService.setIntervalSession();
+      }
     }
   }
 
